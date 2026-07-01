@@ -151,6 +151,82 @@ nav ul a:hover { color: var(--text); }
 .app-tag.purple { background: var(--glow); color: var(--accent); }
 .app-tag.teal   { background: var(--glow-2); color: var(--accent-2); }
 
+/* ── Store buttons (FlightDose) ──────────────────────── */
+.store { margin-top: 24px; }
+
+.store-status {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .72rem; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--accent-2);
+  margin-bottom: 14px;
+}
+.store-status i {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 0 0 var(--accent-2);
+  animation: live-dot 2s ease-out infinite;
+}
+@keyframes live-dot {
+  0%   { box-shadow: 0 0 0 0 rgba(0, 206, 201, .5); }
+  70%  { box-shadow: 0 0 0 7px rgba(0, 206, 201, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 206, 201, 0); }
+}
+
+.store-links { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.store-btn {
+  display: inline-flex; align-items: center; gap: 11px;
+  padding: 9px 18px 9px 15px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #17171f, #0d0d13);
+  border: 1px solid var(--border);
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.store-btn:hover {
+  transform: translateY(-3px);
+  color: var(--text);
+  border-color: var(--accent-2);
+  box-shadow: 0 10px 28px var(--glow-2);
+}
+/* shimmer sweep */
+.store-btn::after {
+  content: '';
+  position: absolute; top: 0; left: -80%;
+  width: 55%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .09), transparent);
+  transform: skewX(-20deg);
+  transition: left .65s ease;
+  pointer-events: none;
+}
+.store-btn:hover::after { left: 135%; }
+
+.store-ico { width: 24px; height: 24px; flex-shrink: 0; }
+.store-txt { display: flex; flex-direction: column; line-height: 1.12; text-align: left; }
+.store-txt small {
+  font-size: .6rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--text-dim);
+}
+.store-txt strong { font-size: .98rem; font-weight: 700; letter-spacing: -.01em; }
+
+/* radiation pulse behind the FlightDose logo */
+.app-logo.pulse { animation: radiate 3s ease-out infinite; }
+@keyframes radiate {
+  0%   { box-shadow: 0 0 0 0 rgba(0, 206, 201, .45); }
+  70%  { box-shadow: 0 0 0 16px rgba(0, 206, 201, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 206, 201, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-logo.pulse,
+  .store-status i { animation: none; }
+  .store-btn,
+  .store-btn::after { transition: none; }
+  .store-btn:hover { transform: none; }
+}
+
 /* ── Footer ──────────────────────────────────────────── */
 footer {
   border-top: 1px solid var(--border);

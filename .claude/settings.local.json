@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(start \"\" \"c:\\\\Users\\\\alexmbroyles\\\\source\\\\repos\\\\apextechnologygroup.io\\\\index.html\")"
     ]
   }
 }
