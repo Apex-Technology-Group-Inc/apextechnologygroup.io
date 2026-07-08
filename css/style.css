@@ -225,6 +225,10 @@ nav ul a:hover { color: var(--text); }
   .store-btn,
   .store-btn::after { transition: none; }
   .store-btn:hover { transform: none; }
+  .policy-card { transition: border-color .25s, box-shadow .25s; }
+  .policy-card:hover { transform: none; }
+  .pc-cta svg { transition: none; }
+  .policy-card:hover .pc-cta svg { transform: none; }
 }
 
 /* ── Footer ──────────────────────────────────────────── */
@@ -261,6 +265,77 @@ footer .links a:hover { color: var(--text); }
 }
 .page-content ul { padding-left: 20px; margin: 8px 0; }
 .page-content li { margin-bottom: 6px; }
+
+/* ── Policy hub (Privacy / Terms index) ──────────────── */
+.policy-hub { max-width: 880px; margin: 0 auto; padding: 84px 24px 96px; }
+
+.hub-head { text-align: center; margin-bottom: 48px; position: relative; }
+.hub-head::before {
+  content: '';
+  position: absolute; left: 50%; top: -30px; transform: translateX(-50%);
+  width: 480px; max-width: 100%; height: 220px;
+  background: radial-gradient(ellipse at center, var(--glow), transparent 70%);
+  pointer-events: none; z-index: -1;
+}
+.hub-head h1 {
+  font-size: clamp(2rem, 4.5vw, 2.9rem); font-weight: 800;
+  letter-spacing: -.03em; margin-bottom: 14px;
+}
+.hub-head h1 .gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hub-head .lead { color: var(--text-dim); font-size: 1.05rem; max-width: 500px; margin: 0 auto; }
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.policy-card {
+  display: flex; flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  color: var(--text);
+  position: relative; overflow: hidden;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.policy-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0; transition: opacity .25s;
+}
+.policy-card:hover {
+  transform: translateY(-4px); color: var(--text);
+  border-color: var(--accent); box-shadow: 0 8px 30px var(--glow);
+}
+.policy-card:hover::before { opacity: 1; }
+.policy-card.teal:hover { border-color: var(--accent-2); box-shadow: 0 8px 30px var(--glow-2); }
+
+.pc-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.pc-head img { width: 48px; height: 48px; border-radius: 12px; object-fit: contain; }
+.pc-head h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
+.policy-card p { color: var(--text-dim); font-size: .92rem; line-height: 1.6; flex-grow: 1; }
+
+.pc-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border);
+}
+.pc-date {
+  font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--text-dim);
+}
+.pc-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .85rem; font-weight: 600; color: var(--accent);
+}
+.policy-card.teal .pc-cta { color: var(--accent-2); }
+.pc-cta svg { width: 15px; height: 15px; transition: transform .25s; }
+.policy-card:hover .pc-cta svg { transform: translateX(4px); }
 
 /* ── Support form ────────────────────────────────────── */
 .support-options {
