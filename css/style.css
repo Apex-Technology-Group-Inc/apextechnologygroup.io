@@ -49,7 +49,6 @@ nav .container {
   font-size: 1.1rem; font-weight: 700; letter-spacing: -.02em;
   color: var(--text);
 }
-.logo span { color: var(--accent); }
 nav ul { list-style: none; display: flex; gap: 28px; }
 nav ul a {
   color: var(--text-dim); font-size: .9rem; font-weight: 500;
@@ -59,6 +58,21 @@ nav ul a:hover { color: var(--text); }
 
 /* Mobile nav */
 .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+/* The period in "apex." is the neon-mode switch. It looks like punctuation
+   until you hover it. That's the point — if you found it, it's for you. */
+.brand { display: flex; align-items: baseline; }
+.theme-toggle {
+  background: none; border: none; padding: 0;
+  font-family: inherit; font-size: 1.1rem; font-weight: 700;
+  letter-spacing: -.02em; line-height: inherit;
+  color: var(--accent); cursor: pointer;
+  /* padding cancelled by margin: a bigger hit target, identical layout */
+  padding: 6px 4px; margin: -6px -4px;
+  transition: text-shadow .3s, color .3s;
+}
+.theme-toggle:hover { text-shadow: 0 0 10px var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; border-radius: 3px; }
 
 @media (max-width: 640px) {
   .nav-toggle { display: block; }
@@ -379,3 +393,86 @@ footer .links a:hover { color: var(--text); }
 .support-card .icon { font-size: 2rem; margin-bottom: 12px; }
 .support-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .support-card p { color: var(--text-dim); font-size: .9rem; }
+
+/* ── Neon mode ───────────────────────────────────────────
+   Opt-in only, toggled by the period in the logo and remembered
+   in localStorage. Same layout, different century.            */
+:root[data-theme="neon"] {
+  --bg:        #05010e;
+  --bg-card:   #0d0322;
+  --bg-hover:  #16093a;
+  --border:    #35186b;
+  --text:      #f4ecff;
+  --text-dim:  #a08fd8;
+  --accent:    #ff2e97;
+  --accent-2:  #00f0ff;
+  --accent-3:  #b967ff;
+  --glow:      rgba(255, 46, 151, .22);
+  --glow-2:    rgba(0, 240, 255, .22);
+  --glow-3:    rgba(185, 103, 255, .22);
+}
+
+:root[data-theme="neon"] body { transition: background-color .35s, color .35s; }
+
+/* CRT scanlines over everything */
+:root[data-theme="neon"] body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 999; pointer-events: none;
+  background: repeating-linear-gradient(180deg,
+    transparent 0 2px, rgba(0, 0, 0, .55) 2px 4px);
+  opacity: .32;
+}
+
+:root[data-theme="neon"] nav { background: rgba(5, 1, 14, .85); }
+:root[data-theme="neon"] .logo { text-shadow: 0 0 14px rgba(255, 46, 151, .35); }
+:root[data-theme="neon"] .theme-toggle { text-shadow: 0 0 12px var(--accent); }
+/* for anyone who made it this far */
+:root[data-theme="neon"] .theme-toggle::after { content: 'exe'; }
+
+/* Synthwave horizon under the hero */
+:root[data-theme="neon"] .hero::after {
+  content: '';
+  position: absolute; left: -30%; right: -30%; bottom: 0; height: 420px;
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 240, 255, .5) 0 1px, transparent 1px 88px),
+    repeating-linear-gradient(0deg,  rgba(255, 46, 151, .42) 0 1px, transparent 1px 56px);
+  transform: perspective(420px) rotateX(58deg);
+  transform-origin: bottom center;
+  -webkit-mask-image: linear-gradient(transparent 4%, #000 55%);
+          mask-image: linear-gradient(transparent 4%, #000 55%);
+  pointer-events: none;
+}
+:root[data-theme="neon"] .hero h1 {
+  text-shadow: 0 0 20px rgba(255, 46, 151, .5), 0 0 48px rgba(0, 240, 255, .22);
+}
+
+/* Micro-labels go monospace */
+:root[data-theme="neon"] .app-tag,
+:root[data-theme="neon"] .store-status,
+:root[data-theme="neon"] .store-txt small,
+:root[data-theme="neon"] .pc-date {
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+}
+
+:root[data-theme="neon"] .app-card,
+:root[data-theme="neon"] .policy-card,
+:root[data-theme="neon"] .support-card {
+  border-color: rgba(255, 46, 151, .3);
+  box-shadow: inset 0 0 44px rgba(255, 46, 151, .05);
+}
+:root[data-theme="neon"] .app-card:hover,
+:root[data-theme="neon"] .policy-card:hover { box-shadow: 0 0 0 1px var(--accent), 0 8px 40px var(--glow); }
+:root[data-theme="neon"] .app-card.teal:hover { box-shadow: 0 0 0 1px var(--accent-2), 0 8px 40px var(--glow-2); }
+:root[data-theme="neon"] .app-card.pink:hover { box-shadow: 0 0 0 1px var(--accent-3), 0 8px 40px var(--glow-3); }
+
+:root[data-theme="neon"] .app-card h3,
+:root[data-theme="neon"] .apps h2,
+:root[data-theme="neon"] .page-content h1 { text-shadow: 0 0 16px rgba(0, 240, 255, .3); }
+
+:root[data-theme="neon"] .store-btn { background: linear-gradient(145deg, #150634, #0a0219); }
+:root[data-theme="neon"] .app-logo { box-shadow: 0 0 22px rgba(255, 46, 151, .28); }
+:root[data-theme="neon"] footer { border-top-color: rgba(255, 46, 151, .3); }
+
+@media (max-width: 640px) {
+  :root[data-theme="neon"] nav ul { background: rgba(5, 1, 14, .95); }
+}

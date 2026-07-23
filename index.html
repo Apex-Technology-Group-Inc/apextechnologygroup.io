@@ -6,13 +6,16 @@
   <title>Apex Technology Group</title>
   <meta name="description" content="Apex Technology Group — makers of RenTool, FlightDose and ApexPoster.">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
 </head>
 <body>
 
 <!-- Nav -->
 <nav>
   <div class="container">
-    <a class="logo" href="/">apex<span>.</span></a>
+    <div class="brand">
+      <a class="logo" href="/">apex</a><button class="theme-toggle" type="button" aria-pressed="false" title="Jack in" aria-label="Jack in — toggle neon mode">.</button>
+    </div>
     <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav ul').classList.toggle('open')">&#9776;</button>
     <ul>
       <li><a href="#apps">Apps</a></li>
