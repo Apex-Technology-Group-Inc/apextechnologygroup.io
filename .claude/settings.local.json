@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(git init:*)",
-      "Bash(start \"\" \"c:\\\\Users\\\\alexmbroyles\\\\source\\\\repos\\\\apextechnologygroup.io\\\\index.html\")"
+      "Bash(start \"\" \"c:\\\\Users\\\\alexmbroyles\\\\source\\\\repos\\\\apextechnologygroup.io\\\\index.html\")",
+      "Bash(cp \"C:/Users/alexmbroyles/Pictures/apexposter.png\" \"c:/Users/alexmbroyles/source/repos/apextechnologygroup.io/img/ApexPosterLogo.png\" && ls -la \"c:/Users/alexmbroyles/source/repos/apextechnologygroup.io/img\")",
+      "WebFetch(domain:apexposter.net)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\alexmbroyles\\Pictures"
     ]
   }
 }
