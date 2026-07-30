@@ -352,6 +352,7 @@ footer .links a:hover { color: var(--text); }
 }
 .policy-card:hover::before { opacity: 1; }
 .policy-card.teal:hover { border-color: var(--accent-2); box-shadow: 0 8px 30px var(--glow-2); }
+.policy-card.pink:hover { border-color: var(--accent-3); box-shadow: 0 8px 30px var(--glow-3); }
 
 .pc-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
 .pc-head img { width: 48px; height: 48px; border-radius: 12px; object-fit: contain; }
@@ -371,6 +372,7 @@ footer .links a:hover { color: var(--text); }
   font-size: .85rem; font-weight: 600; color: var(--accent);
 }
 .policy-card.teal .pc-cta { color: var(--accent-2); }
+.policy-card.pink .pc-cta { color: var(--accent-3); }
 .pc-cta svg { width: 15px; height: 15px; transition: transform .25s; }
 .policy-card:hover .pc-cta svg { transform: translateX(4px); }
 

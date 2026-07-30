@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApexPoster Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #e84393;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.04);
+    }
+    h1, h2, h3 { line-height: 1.25; }
+    h1 { margin-top: 0; color: var(--accent); font-size: 2rem; }
+    h2 { margin-top: 2rem; font-size: 1.25rem; }
+    h3 { margin-top: 1.5rem; font-size: 1.02rem; }
+    .muted { color: var(--muted); }
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fde8f1;
+      color: #a61e63;
+      font-size: .9rem;
+      margin-bottom: 12px;
+    }
+    ul { padding-left: 1.2rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: .93rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 9px 11px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fafafb; font-weight: 700; }
+    .tbl-wrap { overflow-x: auto; }
+    .callout {
+      background: #fdf2f8;
+      border: 1px solid #f9c8de;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 18px 0;
+    }
+    .callout p { margin: 0; }
+    .footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="badge">ApexPoster Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="muted"><strong>Last Updated:</strong> July 2026</p>
+
+      <p>
+        ApexPoster is a cloud-based digital signage service provided by Apex Technology Group, Inc. (“Apex,” “we,”
+        “us,” or “our”), a Delaware corporation. It lets you upload images, video, and documents, arrange them into
+        playlists and schedules, and display them on screens you control.
+      </p>
+      <p>
+        This Privacy Policy explains what personal information we collect, why, who we share it with, and what you can
+        do about it. It covers the ApexPoster website at <a href="https://apexposter.net">apexposter.net</a>, the
+        ApexPoster dashboard, our player applications for Fire TV, Android TV, Tizen, webOS, and Windows, and our
+        APIs (together, the “Services”). It is a companion to the
+        <a href="apexposterTOS.html">ApexPoster Terms of Service</a>.
+      </p>
+
+      <div class="callout">
+        <p>
+          <strong>The short version.</strong> We collect what we need to run your account and bill you: your email,
+          your screens, your media, and technical logs. We never see your card number. We don't sell your
+          information, we don't run advertising trackers inside the dashboard, and our players have no cameras,
+          microphones, or audience measurement of any kind. Delete your account and we delete your data.
+        </p>
+      </div>
+
+      <h2>1. Who Is Responsible for What</h2>
+      <p>
+        There are two distinct roles in ApexPoster, and which one applies changes who is responsible for your
+        information.
+      </p>
+      <ul>
+        <li>
+          <strong>Apex as controller.</strong> For information about our customers and website visitors — account
+          details, billing records, technical logs, support correspondence — we decide why and how it is processed.
+          We are responsible for it, and you can exercise your rights directly with us.
+        </li>
+        <li>
+          <strong>Apex as processor.</strong> For the content our customers upload and display, and for information
+          about their own staff and audiences within it, we act on our customer's instructions. The customer decides
+          what goes on their screens. If you are an employee, visitor, or member of the public whose information
+          appears in content displayed on an ApexPoster screen, the business operating that screen is responsible
+          for it — contact them, and see Section 9.
+        </li>
+      </ul>
+
+      <h2>2. Information We Collect</h2>
+
+      <h3>Account information</h3>
+      <ul>
+        <li>Your email address, which is how we identify your account.</li>
+        <li>Your name, if you provide it, and your organization or account name.</li>
+        <li>Your account role and permissions, and those of any users you add.</li>
+        <li>Account settings such as time zone, alert recipients, and billing-notification recipients.</li>
+      </ul>
+      <p>
+        <strong>We never see your password.</strong> Sign-in is handled by Google Firebase Authentication. Passwords
+        are set, stored, and verified by Firebase and never reach our servers. Our systems only ever receive a signed
+        token confirming that you authenticated successfully.
+      </p>
+
+      <h3>Billing information</h3>
+      <ul>
+        <li>Your plan, screen count, billing interval, subscription status, and renewal date.</li>
+        <li>Identifiers linking your account to your record with our payment processor.</li>
+        <li>An append-only audit record of billing events on your account — what changed, when, and why.</li>
+      </ul>
+      <p>
+        <strong>We do not store card numbers.</strong> Payment card details are collected, transmitted, and stored by
+        Stripe on PCI-compliant infrastructure and never pass through or rest on our servers. Billing addresses, tax
+        identifiers, and invoices are held by Stripe on our behalf.
+      </p>
+
+      <h3>Screen and device information</h3>
+      <p>
+        When you install a player application on a device, that device registers with us. We collect and store:
+      </p>
+      <ul>
+        <li>An opaque device identifier generated at first launch, and a secret token the device uses to authenticate.</li>
+        <li>The short pairing code shown on the display until the device is claimed.</li>
+        <li>The name you give the screen, its orientation, tags, group, schedule, and assigned playlist.</li>
+        <li>Heartbeat timestamps recording when the device was last seen online.</li>
+        <li>Basic device information reported by the player — hardware model and application version.</li>
+        <li>What the screen last reported it was displaying, which drives the dashboard preview.</li>
+      </ul>
+      <p>
+        Device identifiers are not tied to any individual. They identify a piece of hardware on your account, not a
+        person.
+      </p>
+
+      <h3>Content you upload</h3>
+      <p>
+        Media files you upload — images, video, PDFs — along with their filenames, sizes, upload times, and any
+        thumbnails, previews, or rasterized pages we generate from them so they can be displayed. Also the playlists,
+        schedules, layouts, and any feed URLs or widget settings you configure. See Section 9 for how we treat this.
+      </p>
+
+      <h3>Technical and log information</h3>
+      <ul>
+        <li>IP addresses, request times, and standard web-server log entries.</li>
+        <li>Application logs and error diagnostics used to operate and debug the Services.</li>
+        <li>A record of transactional emails we sent you and whether delivery succeeded.</li>
+      </ul>
+      <p>
+        We use IP address to secure the Services, diagnose faults, and detect abuse — including the creation of
+        multiple free accounts to evade plan limits, which our Terms prohibit.
+      </p>
+
+      <h3>Support correspondence</h3>
+      <p>
+        If you email us or submit a support request, we keep the message and our reply for as long as needed to
+        resolve the issue and to maintain a record of support history.
+      </p>
+
+      <h2>3. What We Do Not Collect</h2>
+      <p>These are commitments, not omissions. If any of them change, we will update this policy first.</p>
+      <ul>
+        <li><strong>No cameras, microphones, or audience measurement.</strong> ApexPoster players display content. They do not record, count, film, photograph, or analyze the people in front of a screen. There is no face detection, no demographic estimation, no dwell-time tracking, and no proof-of-play based on watching an audience. Many digital signage products offer these. Ours does not.</li>
+        <li><strong>No sale or sharing of personal information.</strong> We do not sell your personal information, and we do not share it for cross-context behavioral advertising, as those terms are defined under California law. We have never done so.</li>
+        <li><strong>No advertising or tracking inside the dashboard.</strong> The authenticated ApexPoster application carries no advertising pixels, no retargeting tags, and no session-recording or screen-replay tools. Your media library is yours; we do not send it, or recordings of you working with it, to a third party.</li>
+        <li><strong>No card numbers.</strong> As described above, we never receive them.</li>
+        <li><strong>No content mining.</strong> We do not analyze your media for advertising purposes, and we do not use your content to train machine learning models.</li>
+      </ul>
+
+      <h2>4. How We Use Information, and Our Legal Bases</h2>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>Purpose</th><th>Information used</th><th>Legal basis</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Creating your account, authenticating you, and providing the Services</td>
+              <td>Email, name, account settings, screens, content</td>
+              <td>Performance of our contract with you</td>
+            </tr>
+            <tr>
+              <td>Delivering content to your screens and keeping them running</td>
+              <td>Device identifiers and tokens, heartbeats, screen configuration</td>
+              <td>Performance of our contract with you</td>
+            </tr>
+            <tr>
+              <td>Charging you and keeping billing records</td>
+              <td>Billing identifiers, plan, screen count, billing audit</td>
+              <td>Performance of our contract; compliance with tax and accounting law</td>
+            </tr>
+            <tr>
+              <td>Sending transactional email — payment failures, plan changes, offline alerts, account notices</td>
+              <td>Email addresses you designate</td>
+              <td>Performance of our contract; our legitimate interest in telling you about your own account</td>
+            </tr>
+            <tr>
+              <td>Securing the Services, preventing abuse, and enforcing plan limits</td>
+              <td>IP addresses, logs, account and usage records</td>
+              <td>Our legitimate interest in protecting the Services and our customers</td>
+            </tr>
+            <tr>
+              <td>Diagnosing faults and improving the product</td>
+              <td>Logs, error diagnostics, aggregate usage counts</td>
+              <td>Our legitimate interest in operating a working service</td>
+            </tr>
+            <tr>
+              <td>Responding to support requests</td>
+              <td>Your correspondence and account context</td>
+              <td>Performance of our contract; our legitimate interest in supporting customers</td>
+            </tr>
+            <tr>
+              <td>Complying with law and responding to lawful requests</td>
+              <td>Whatever the obligation requires</td>
+              <td>Legal obligation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Where we rely on legitimate interests, you may object based on your particular situation. See Section 14.
+      </p>
+
+      <h2>5. Cookies and Similar Technologies</h2>
+      <p>
+        We distinguish between our public marketing pages and the authenticated dashboard, and treat them
+        differently.
+      </p>
+
+      <h3>The ApexPoster dashboard</h3>
+      <p>
+        The dashboard uses only what it needs to work: a session or authentication token so you stay signed in, and
+        local browser storage for interface preferences. These are strictly necessary and cannot be switched off
+        without breaking sign-in. <strong>We place no advertising, marketing, or session-recording technologies
+        inside the dashboard.</strong>
+      </p>
+
+      <h3>Public marketing pages</h3>
+      <p>
+        Our public pages currently load web fonts from Google Fonts, which discloses your IP address to Google when
+        the page renders. Beyond that, our marketing pages currently carry no analytics or advertising cookies.
+      </p>
+      <p>
+        We may in future add analytics or advertising-measurement technologies to our <em>public marketing pages</em>
+        — for example, to understand which pages lead people to sign up, or to measure the results of advertising we
+        pay for. If we do, we will update this policy before doing so, we will request consent where the law requires
+        it, and we will provide a way to manage your preferences. Our commitment in Section 3 that the authenticated
+        dashboard stays free of advertising and session-recording technologies is not subject to that change.
+      </p>
+      <p>
+        You can also configure your browser to block or delete cookies. Blocking strictly necessary cookies will
+        prevent you from signing in.
+      </p>
+
+      <h2>6. Email We Send You</h2>
+      <p>
+        <strong>We do not send marketing email.</strong> ApexPoster sends transactional messages only — the ones you
+        need in order to run your account:
+      </p>
+      <ul>
+        <li>Billing notices: payment failures, plan changes, cancellations, receipts and invoices from our payment processor.</li>
+        <li>Operational alerts: a screen has gone offline, a screen has recovered, uploads have been paused.</li>
+        <li>Account notices: security matters, material changes to our Terms or this policy, and account deletion confirmations.</li>
+      </ul>
+      <p>
+        You can control where operational alerts go, and turn them off, in your account settings. Billing and account
+        notices cannot be turned off while your account is active — if your card fails, we have to be able to tell
+        you.
+      </p>
+      <p>
+        If we ever introduce a newsletter or product announcements, it will be opt-in, and every message will carry a
+        one-click unsubscribe link.
+      </p>
+
+      <h2>7. Who We Share Information With</h2>
+      <p>
+        We do not sell your information and we do not disclose it to third parties for their own purposes. We rely on
+        the following service providers to operate ApexPoster. Each is bound by contract to process information only
+        on our instructions and to protect it appropriately.
+      </p>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>Provider</th><th>What they do</th><th>What they receive</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google (Firebase Authentication)</td>
+              <td>Sign-in and identity for the dashboard</td>
+              <td>Email address, password (set and held by Google, never by us), authentication events</td>
+            </tr>
+            <tr>
+              <td>Stripe</td>
+              <td>Payment processing, invoicing, tax calculation, the billing portal</td>
+              <td>Name, email, billing address, payment card details, subscription and invoice records</td>
+            </tr>
+            <tr>
+              <td>Amazon Web Services</td>
+              <td>Hosting, media storage, and transactional email delivery</td>
+              <td>All service data at rest and in transit, including uploaded media and outbound email</td>
+            </tr>
+            <tr>
+              <td>MongoDB</td>
+              <td>Database for account, screen, playlist, and media metadata</td>
+              <td>Account and configuration records</td>
+            </tr>
+            <tr>
+              <td>Google Fonts</td>
+              <td>Web fonts on our public marketing pages</td>
+              <td>IP address and browser information of visitors to those pages</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A current list of our subprocessors is maintained and made available on request; we will give reasonable
+        notice before adding a new one that processes customer data.
+      </p>
+      <p>We may also disclose information:</p>
+      <ul>
+        <li>Where required by law, subpoena, or other valid legal process. Where we are permitted to do so, we will notify the affected customer first.</li>
+        <li>To establish, exercise, or defend legal claims.</li>
+        <li>To protect the rights, safety, or property of Apex, our customers, or the public.</li>
+        <li>In connection with a merger, acquisition, financing, or sale of assets, subject to this policy continuing to apply to the transferred information.</li>
+      </ul>
+
+      <h2>8. International Transfers</h2>
+      <p>
+        Apex is based in the United States and our infrastructure is located there. If you access the Services from
+        outside the United States, your information will be transferred to and processed in the United States, which
+        may have different data protection laws than your country.
+      </p>
+      <p>
+        We do not currently participate in the EU-U.S. Data Privacy Framework. Where we transfer personal data from
+        the European Economic Area, the United Kingdom, or Switzerland, we rely on the European Commission's Standard
+        Contractual Clauses (and the UK Addendum where applicable), which we will enter into on request as part of a
+        data processing agreement. Contact us at
+        <a href="mailto:support@apexposter.net">support@apexposter.net</a> to put one in place.
+      </p>
+
+      <h2>9. Content You Display, and Your Own Audiences</h2>
+      <p>
+        Content you upload is yours. We store it, transcode and generate previews from it, and deliver it to your
+        screens — nothing else. We do not review it for commercial purposes, use it for advertising, or use it to
+        train models. We access it only where necessary to operate the Services, to respond to a support request you
+        have made, or where we are required to by law.
+      </p>
+      <p>
+        <strong>You are the controller of what you display.</strong> If your content includes personal information —
+        staff photographs, names on a welcome board, birthday announcements, customer testimonials, images of
+        identifiable people — you are responsible for it: for the legal basis, for any notices or consents required,
+        and for responding to requests from the people concerned. We will provide reasonable assistance if you
+        receive such a request.
+      </p>
+      <p>
+        A data processing agreement recording this arrangement is
+        <a href="apexposterDPA.html">available here</a> and can be executed with us on request.
+      </p>
+      <p class="muted">
+        <strong>If you are a member of the public</strong> who has seen your information on an ApexPoster screen: the
+        business operating that screen chose to display it and is responsible for it. Please contact that business.
+        We can pass a request on but we cannot decide it for them.
+      </p>
+
+      <h2>10. How Long We Keep Information</h2>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>Information</th><th>Retention</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Account details and settings</td><td>For as long as your account is active</td></tr>
+            <tr><td>Uploaded media and playlists</td><td>Until you delete them, or 30 days after your account terminates</td></tr>
+            <tr><td>Screen configuration and heartbeat history</td><td>For as long as the screen exists on your account</td></tr>
+            <tr><td>Billing and tax records</td><td>As long as required by tax and accounting law after the relationship ends, typically seven years</td></tr>
+            <tr><td>Billing audit records</td><td>Retained as an append-only record of why an account was charged, changed, or refunded</td></tr>
+            <tr><td>Server and application logs</td><td>Typically 30 to 90 days, longer where needed to investigate a security incident</td></tr>
+            <tr><td>Support correspondence</td><td>As long as needed to resolve the matter and maintain support history</td></tr>
+            <tr><td>Dormant free accounts</td><td>May be deleted after 12 months without a sign-in, following at least 30 days' notice, as described in the Terms</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Backups are retained on a rolling basis and are overwritten in the ordinary course. Information deleted from
+        the live service may persist briefly in backups before being cycled out.
+      </p>
+
+      <h2>11. Deleting Your Account</h2>
+      <p>
+        You can request deletion of your account from the dashboard or by emailing
+        <a href="mailto:support@apexposter.net">support@apexposter.net</a> from the address on the account. We confirm
+        the request by email before acting on it, so that nobody can delete an account they do not control. If a
+        request looks suspicious, we will investigate before proceeding.
+      </p>
+      <p>When a deletion is carried out:</p>
+      <ul>
+        <li><strong>Any active subscription is cancelled first.</strong> This is deliberate — deleting an account while a subscription is still running would leave you being charged for a product you can no longer log into. If the cancellation cannot be completed, we stop and the deletion does not proceed.</li>
+        <li>Your account record, screens, playlists, schedules, groups, and media metadata are removed from our database.</li>
+        <li>Your uploaded media and generated derivatives are deleted from our storage.</li>
+        <li>Your sign-in identity is deleted from our authentication provider.</li>
+        <li>Screens are unpaired and stop receiving content. Content already cached on a device may remain on that device until it is reset.</li>
+      </ul>
+      <p>
+        We retain the billing and tax records described in Section 10, and an audit record that the deletion
+        occurred. Everything else is gone and cannot be recovered — export anything you need first.
+      </p>
+
+      <h2>12. Security</h2>
+      <p>
+        We take reasonable technical and organizational measures appropriate to the risk, including:
+      </p>
+      <ul>
+        <li>Encryption in transit — the dashboard, the API, and player connections are served over HTTPS.</li>
+        <li>Authentication handled by a dedicated identity provider, so we never hold your password.</li>
+        <li>Per-device secret tokens, so a screen can only fetch content for the account it is paired to.</li>
+        <li>Role-based access within an account, and restricted internal access on a need-to-know basis.</li>
+        <li>Payment card handling delegated entirely to a PCI-compliant processor.</li>
+        <li>An append-only audit trail for billing-affecting events.</li>
+      </ul>
+      <p>
+        No system is perfectly secure, and we cannot guarantee absolute security. If a breach affects your personal
+        information, we will notify you and any required authority as the law requires and without undue delay.
+      </p>
+
+      <h2>13. Children</h2>
+      <p>
+        ApexPoster is a business product and is not directed to children. We do not knowingly collect personal
+        information from anyone under 16. If we learn that we have, we will delete it. If you believe a child has
+        provided us with personal information, contact us at
+        <a href="mailto:support@apexposter.net">support@apexposter.net</a>.
+      </p>
+      <p>
+        Note that if you display content featuring children on your screens, you are responsible for the consents
+        that requires.
+      </p>
+
+      <h2>14. Your Rights</h2>
+      <p>
+        We honor the following rights for anyone who asks, regardless of where they live, subject to verification of
+        your identity and to any legal obligation that requires us to retain information:
+      </p>
+      <ul>
+        <li><strong>Access:</strong> confirmation of whether we hold personal information about you, and a copy of it.</li>
+        <li><strong>Correction:</strong> correction of inaccurate or incomplete information. You can update most of it yourself in your account settings.</li>
+        <li><strong>Deletion:</strong> deletion of your information, as described in Section 11.</li>
+        <li><strong>Portability:</strong> a copy of information you provided to us in a structured, commonly used, machine-readable format.</li>
+        <li><strong>Objection and restriction:</strong> objection to processing based on legitimate interests, or a request that we restrict processing while a dispute about accuracy or lawfulness is resolved.</li>
+        <li><strong>Withdrawal of consent:</strong> where we rely on consent, withdrawal at any time, without affecting processing already carried out.</li>
+        <li><strong>No discrimination:</strong> we will not deny you service, charge you a different price, or provide a lesser service because you exercised a privacy right.</li>
+      </ul>
+      <p>
+        <strong>Automated decision-making.</strong> We do not make decisions producing legal or similarly significant
+        effects about you by automated means, and we do not profile you.
+      </p>
+      <p>
+        To exercise any of these, email <a href="mailto:support@apexposter.net">support@apexposter.net</a>. We will
+        respond within 30 days, or tell you why we need longer. There is no charge unless a request is manifestly
+        unfounded or excessive.
+      </p>
+
+      <h3>If you are in California</h3>
+      <p>
+        Under the CCPA as amended by the CPRA, you have the rights above, plus the right to know the categories of
+        personal information we collect, the purposes for collecting it, and the categories of third parties we
+        disclose it to — all of which are set out in Sections 2, 4, and 7. You may designate an authorized agent to
+        make a request on your behalf.
+      </p>
+      <p>
+        <strong>We do not sell personal information and we do not share it for cross-context behavioral
+        advertising.</strong> We have not done so in the preceding twelve months, including with respect to anyone
+        under 16. Because of that, we do not offer a "Do Not Sell or Share My Personal Information" link — there is
+        nothing for it to opt you out of. We do not process sensitive personal information for the purposes that
+        would give rise to a right to limit its use.
+      </p>
+
+      <h3>If you are in the EEA, UK, or Switzerland</h3>
+      <p>
+        Where the GDPR or UK GDPR applies to our processing, we honor the rights above, and you have the right to
+        lodge a complaint with your local supervisory authority. We do not currently participate in the EU-U.S. Data
+        Privacy Framework; see Section 8 for how we handle transfers. Where we act as a processor for one of our
+        customers, that customer is responsible for responding to your request and we will assist them.
+      </p>
+
+      <h2>15. Changes to This Policy</h2>
+      <p>
+        We may update this policy. When we do, we will change the date at the top and post the revised version here.
+        If a change materially affects how we use your personal information — including any addition of analytics or
+        advertising technologies to our public pages — we will give notice by email to account holders, or by a
+        notice in the dashboard, before it takes effect.
+      </p>
+
+      <h2>16. Contact Us</h2>
+      <p>
+        Questions about this policy, or requests about your personal information:<br />
+        <a href="mailto:support@apexposter.net">support@apexposter.net</a>
+      </p>
+      <p>
+        Apex Technology Group, Inc.<br />
+        <a href="https://apexposter.net">apexposter.net</a>
+      </p>
+
+      <div class="footer">
+        Copyright 2026 Apex Technology Group, Inc.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
