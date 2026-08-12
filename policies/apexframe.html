@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ApexFrame Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            max-width: 900px;
+            color: #222;
+        }
+        h1, h2 {
+            color: #1f3a5f;
+        }
+        h1 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #2c4a72;
+            margin-top: 24px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 16px 0;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.95em;
+        }
+        th {
+            background: #f0f4f8;
+            color: #1f3a5f;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p><strong>Effective Date:</strong> 12 August 2026</p>
+<p><strong>Application:</strong> ApexFrame, operated by Apex Technology Group, Inc.</p>
+
+<div class="section">
+    <h2>1. Overview</h2>
+    <p>
+        ApexFrame is a USB slideshow player for Android TV and Fire TV. It displays photos, videos, and PDF documents
+        stored on a drive you connect to your television.
+    </p>
+    <p class="highlight">
+        ApexFrame collects no data whatsoever.<br>
+        ApexFrame has no user accounts and no sign-in.<br>
+        ApexFrame contains no advertising, no analytics, and no crash reporting.<br>
+        Your photos, videos, and documents never leave your device.
+    </p>
+    <p>
+        This is not a promise about how we choose to behave. It is a property of how the application is built, and one
+        you can verify for yourself &mdash; see Section 2.
+    </p>
+</div>
+
+<div class="section">
+    <h2>2. ApexFrame Cannot Access the Internet</h2>
+    <p>
+        On Android, an application can only use the network if it declares the <code>android.permission.INTERNET</code>
+        permission. <strong>ApexFrame does not declare that permission.</strong> The operating system therefore prevents
+        the application from opening any network connection at all.
+    </p>
+    <p>
+        This means ApexFrame is technically incapable of transmitting your information anywhere, whether to us, to an
+        advertiser, or to anyone else. There is no server to send data to, because there is no ability to reach one.
+    </p>
+    <p>
+        You do not have to take our word for this. Every application's permissions are published on its store listing.
+        Open the ApexFrame listing on Google Play or the Amazon Appstore, view the permission list, and confirm that
+        internet access does not appear.
+    </p>
+</div>
+
+<div class="section">
+    <h2>3. Information We Collect</h2>
+    <p class="highlight">None.</p>
+    <p>
+        We collect no personal information, no usage information, no device identifiers, no diagnostic information, and
+        no content of any kind. Specifically, ApexFrame does not collect:
+    </p>
+    <ul>
+        <li>Your name, email address, or any other contact information</li>
+        <li>Any account credentials &mdash; ApexFrame has no accounts to sign in to</li>
+        <li>Your photos, videos, documents, file names, or folder names</li>
+        <li>Device identifiers, advertising identifiers, or IP addresses</li>
+        <li>Usage statistics, feature analytics, or session information</li>
+        <li>Crash reports or diagnostic logs</li>
+        <li>Location information of any kind</li>
+        <li>Payment information &mdash; ApexFrame is free and contains no purchases</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>4. How Your Media Is Handled</h2>
+    <p>
+        ApexFrame reads the photos, videos, and PDF documents in the folder you choose, decodes them, and displays them
+        on your television. All of this happens on the device itself.
+    </p>
+    <p>
+        Your media is never uploaded, copied to any server, backed up by us, indexed by us, or made available to us or
+        to any third party. We have no access to it and no way to obtain it.
+    </p>
+    <p>
+        ApexFrame does not modify, move, rename, or delete the files on your drive. It only reads them.
+    </p>
+</div>
+
+<div class="section">
+    <h2>5. Information Stored on Your Device</h2>
+    <p>
+        ApexFrame stores your preferences &mdash; slide duration, transition style, sort order, scaling, overlays,
+        schedule, and which folder you selected &mdash; in the application's own private storage on your television.
+        This information stays on that device, is accessible only to ApexFrame, and is removed when you uninstall the
+        application.
+    </p>
+    <p>
+        If you use the optional <strong>Save settings to a drive</strong> feature, ApexFrame writes a file named
+        <code>apexframe.json</code> to a location you choose, so you can copy your settings to another television. That
+        file contains only your display preferences. It is written to your own storage, at your explicit instruction,
+        and is never transmitted anywhere.
+    </p>
+    <p>
+        ApexFrame may also write temporary copies of PDF documents to its private cache in order to display them. These
+        are managed by the application and removed by the operating system when the application's cache is cleared or
+        the application is uninstalled.
+    </p>
+</div>
+
+<div class="section">
+    <h2>6. Permissions ApexFrame Requests, and Why</h2>
+    <table>
+        <tr>
+            <th>Permission</th>
+            <th>Why it is requested</th>
+        </tr>
+        <tr>
+            <td>Photos and videos<br>(<code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, or on older versions <code>READ_EXTERNAL_STORAGE</code>)</td>
+            <td>
+                To read the media on your USB drive so it can be displayed. Requested only on televisions that provide
+                no system folder picker; where a folder picker is available, ApexFrame requests no permission at all.
+                Media is read locally and never transmitted.
+            </td>
+        </tr>
+        <tr>
+            <td>Display over other apps<br>(<code>SYSTEM_ALERT_WINDOW</code>)</td>
+            <td>
+                Android requires this permission for an application to reopen itself after the television powers on.
+                It is what allows an unattended photo frame to resume by itself after a power cut. <strong>ApexFrame
+                never draws anything over another application.</strong> Slideshows work normally without it.
+            </td>
+        </tr>
+        <tr>
+            <td>Run at startup<br>(<code>RECEIVE_BOOT_COMPLETED</code>)</td>
+            <td>To restart the slideshow automatically after the television reboots.</td>
+        </tr>
+        <tr>
+            <td>Prevent sleeping<br>(<code>WAKE_LOCK</code>)</td>
+            <td>To keep the screen on while a slideshow is playing, so the display does not blank mid-slideshow.</td>
+        </tr>
+    </table>
+    <p>
+        None of these permissions grant network access, and none are used to gather information about you.
+    </p>
+</div>
+
+<div class="section">
+    <h2>7. Third Parties</h2>
+    <p>
+        ApexFrame uses no third-party services. There are no advertising networks, no analytics providers, no crash
+        reporting services, no cloud storage providers, and no data processors. No third party receives any information
+        about you through ApexFrame, because no information is collected or transmitted.
+    </p>
+    <p>
+        The store you obtained ApexFrame from &mdash; Google Play or the Amazon Appstore &mdash; operates under its own
+        privacy policy and may collect information about your download and installation. That activity is between you
+        and that store, and is outside our control and our visibility.
+    </p>
+</div>
+
+<div class="section">
+    <h2>8. Selling and Sharing of Data</h2>
+    <p>
+        We do not sell, rent, share, disclose, or otherwise make available any personal information, because we do not
+        collect any. We have never done so and, given that ApexFrame cannot access the internet, we are not in a
+        position to do so.
+    </p>
+</div>
+
+<div class="section">
+    <h2>9. Children's Privacy</h2>
+    <p>
+        ApexFrame is suitable for all ages and collects no information from anyone, including children under 13. Because
+        no personal information is ever collected, there is nothing to disclose, delete, or restrict in relation to a
+        child's use of the application.
+    </p>
+</div>
+
+<div class="section">
+    <h2>10. Your Rights</h2>
+    <p>
+        Privacy laws including the EU General Data Protection Regulation (GDPR) and the California Consumer Privacy Act
+        (CCPA) give you rights to access, correct, delete, and port your personal information, and to know whether it
+        has been sold or shared.
+    </p>
+    <p>
+        We hold no personal information about you, so there is nothing for us to provide, correct, delete, or transfer,
+        and nothing that could have been sold or shared. Should you wish to remove the preferences ApexFrame keeps on
+        your own television, uninstalling the application deletes them.
+    </p>
+    <p>
+        You are welcome to contact us to confirm any of the above.
+    </p>
+</div>
+
+<div class="section">
+    <h2>11. Data Retention and Security</h2>
+    <p>
+        We retain no data about you, so there is no retention period, and no store of your information that could be
+        breached, misused, or subpoenaed from us. The preferences ApexFrame keeps are held in private application
+        storage on your own device and are protected by the operating system's own application sandbox.
+    </p>
+</div>
+
+<div class="section">
+    <h2>12. Changes to This Policy</h2>
+    <p>
+        We may update this Privacy Policy periodically. If we make material changes, we will update the effective date
+        at the top of this page. Should a future version of ApexFrame ever collect any information at all, that change
+        would be reflected here and in the application's published permission list before it took effect.
+    </p>
+</div>
+
+<div class="section">
+    <h2>13. Contact</h2>
+    <p>If you have questions or requests regarding this Privacy Policy:</p>
+    <p>
+        <strong>Email:</strong> <a href="mailto:apex@apextechnologygroup.io">apex@apextechnologygroup.io</a><br>
+        <strong>Company:</strong> Apex Technology Group, Inc., operating ApexFrame
+    </p>
+</div>
+
+<div class="footer">
+    &copy; 2026 Apex Technology Group, Inc. All rights reserved.
+</div>
+
+</body>
+</html>
