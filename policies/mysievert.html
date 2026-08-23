@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MySievert Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            max-width: 900px;
+            color: #222;
+        }
+        h1, h2 {
+            color: #1f3a5f;
+        }
+        h1 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #2c4a72;
+            margin-top: 24px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .callout {
+            background: #f4f7fb;
+            border-left: 4px solid #1f3a5f;
+            padding: 12px 16px;
+            margin: 16px 0;
+        }
+        .warn {
+            background: #fdf6f6;
+            border-left: 4px solid #b00020;
+            padding: 12px 16px;
+            margin: 16px 0;
+        }
+        .medbanner {
+            background: #fff8e6;
+            border: 2px solid #b00020;
+            padding: 16px 20px;
+            margin: 24px 0;
+        }
+        .medbanner p:first-child {
+            margin-top: 0;
+        }
+        .medbanner strong {
+            color: #b00020;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 16px 0;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.95em;
+        }
+        th {
+            background: #f0f4f8;
+            color: #1f3a5f;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        a { color: #1f3a5f; }
+    </style>
+</head>
+<body>
+
+<h1>MySievert Privacy Policy</h1>
+<p><strong>Effective Date:</strong> 23 August 2026</p>
+<p><strong>Last Updated:</strong> 23 August 2026</p>
+<p><strong>Application:</strong> MySievert &mdash; Medical Radiation Tracker</p>
+<p><strong>Company:</strong> Apex Technology Group, Inc. (&ldquo;Apex,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;)</p>
+
+<div class="medbanner">
+    <p><strong>MYSIEVERT IS NOT MEDICAL ADVICE AND DOES NOT INTERPRET ANYTHING.</strong></p>
+    <p>
+        MySievert is a record-keeping tool and nothing else. It does not diagnose, treat, cure,
+        mitigate, or prevent any disease or condition. It does not tell you whether any dose is
+        safe, unsafe, high, low, normal, elevated, concerning, acceptable, or requiring action,
+        because it does not evaluate doses at all &mdash; it stores numbers you asked it to store.
+        It is not a substitute for professional medical advice, diagnosis, or treatment, and it is
+        not a medical device. <strong>Never disregard professional medical advice, delay seeking
+        it, or accept or decline a scan, procedure, or treatment because of anything you see in
+        this app.</strong> Talk to your doctor, radiologist, or a qualified medical physicist.
+    </p>
+    <p>
+        The full statement of this is Sections 3 and 4 of the
+        <a href="mysievertTOS.html">Terms of Service</a>. Read them.
+    </p>
+</div>
+
+<div class="callout">
+    <p><strong>Washington residents, and anyone who wants the health-data specifics:</strong>
+    consumer health data is also covered by our separate
+    <a href="mysievertCHDPP.html">Consumer Health Data Privacy Policy</a>, which is a distinct
+    document as required by the Washington My Health My Data Act. Where that policy addresses
+    consumer health data, it controls.</p>
+</div>
+
+<div class="section">
+    <h2>1. The short version</h2>
+
+    <p class="highlight">
+        Your medical procedure records are encrypted on your device, with a key we do not have and
+        cannot obtain. We cannot read your radiation history. We cannot list it, count it, or
+        describe it. Not with database access, not with server access, not under legal compulsion,
+        and not at your own request.
+    </p>
+
+    <p>
+        MySievert is a personal record-keeping tool. You log medical procedures that involved
+        radiation; the app attaches published reference dose values and keeps a running history for
+        you. It does not assess those values, and it does not tell you what they mean. Everything
+        about those procedures is encrypted before it ever leaves your device.
+    </p>
+
+    <p>What we actually hold on our servers, for each account, is:</p>
+    <ul>
+        <li>An opaque identifier from your sign-in provider</li>
+        <li>Two encrypted byte arrays we cannot decrypt or parse</li>
+        <li>One boolean recording whether you hold a paid entitlement</li>
+    </ul>
+
+    <p>That is the complete list. There is no procedure table, no record count, no activity log,
+    no analytics database, and no advertising identifier anywhere in this product.</p>
+
+    <p class="highlight">
+        We do not sell your personal data. We do not share it for advertising. We serve no ads.
+        We run no analytics SDK. We never request location permission, for any reason, ever.
+    </p>
+</div>
+
+<div class="section">
+    <h2>2. What this policy covers</h2>
+    <p>
+        This policy applies to the MySievert mobile applications, the MySievert API operated by Apex,
+        and any MySievert web client we may publish. It does not apply to your healthcare providers,
+        your imaging facility, your insurer, or any third-party service you separately choose to use.
+    </p>
+    <p>
+        Apex Technology Group, Inc. is the controller of the personal data described here.
+    </p>
+</div>
+
+<div class="section">
+    <h2>3. How the system is built, because the privacy claims depend on it</h2>
+
+    <p>
+        Most privacy policies describe a promise. This one describes an architecture, because the
+        promise is a consequence of the architecture and not the other way round.
+    </p>
+
+    <h3>A. Your device holds the data and the key</h3>
+    <p>
+        The local store on your phone is the source of truth for your history. The app works fully
+        offline, including logging. Server synchronisation is backup, never a dependency.
+    </p>
+    <p>
+        A 256-bit data encryption key (the &ldquo;DEK&rdquo;) is generated <em>on your device</em>,
+        by your device, at the moment you log your first record &mdash; not when you create an
+        account. An account with no records has no key material anywhere.
+    </p>
+
+    <h3>B. The server holds ciphertext and does not have the key</h3>
+    <p>
+        Every record &mdash; the exposure type, the date, the dose values, the associated catalog
+        entry, any note you write, and the derived totals &mdash; is serialised into a single
+        document, padded, encrypted on your device, and transmitted to us as an opaque byte array.
+    </p>
+    <p>
+        The server stores that array. It has no schema for its contents, no index over it, and no
+        code path that parses it. We hold a second opaque array containing wrapped copies of your
+        key, each wrapped under a key we do not possess.
+    </p>
+
+    <h3>C. Authentication and encryption are separate systems</h3>
+    <p>
+        Signing in proves who you are. It does not unlock anything. Possessing a valid credential
+        for your account grants access to your <em>ciphertext</em>, and nothing more. Your sign-in
+        provider never holds and cannot derive your encryption key.
+    </p>
+
+    <div class="warn">
+        <p><strong>The cost of this design, stated plainly.</strong> There is no key escrow, no
+        administrative override, no support escalation, and no recovery path that does not run
+        through your own device or your recovery code. If you lose both your device and your
+        recovery code, your history is permanently unreadable &mdash; by you and by us. We accept
+        that cost deliberately, because it is the direct source of every protection described in
+        this policy. See Section 8.</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>4. Information we collect</h2>
+
+    <h3>A. Account identifier</h3>
+    <p>
+        You sign in through Firebase Authentication, operated by Google. We receive and store a
+        single value: an opaque user identifier (a Firebase <code>uid</code>). Our servers handle
+        no name, no email address, and no device identifier in connection with your account.
+    </p>
+    <p>
+        Your chosen sign-in provider &mdash; for example, a Google account &mdash; will itself
+        process the identity information required to authenticate you, under that provider&rsquo;s
+        own privacy policy. Where the provider makes an email address or display name available to
+        the app on your device, the app uses it locally to show you which account you are signed
+        into. That information is not stored in the MySievert account record on our servers.
+    </p>
+
+    <h3>B. Your encrypted vault</h3>
+    <p>
+        One opaque byte array containing your entire encrypted history. We cannot decrypt it and we
+        cannot parse it.
+    </p>
+
+    <h3>C. Your encrypted key wraps</h3>
+    <p>
+        One opaque byte array containing wrapped copies of your data encryption key. It is held as a
+        single undifferentiated blob rather than a structured list, deliberately, so that we cannot
+        even determine <em>which kinds</em> of wraps your account holds &mdash; whether you have set
+        up a recovery code, for instance.
+    </p>
+
+    <h3>D. Entitlement</h3>
+    <p>
+        One boolean recording whether your account holds a paid entitlement, and, where a purchase
+        has been made, a one-way hash of the store purchase token. The hash exists solely to prevent
+        one purchase from entitling many accounts. The raw token is never stored.
+    </p>
+
+    <h3>E. Technical metadata we necessarily hold</h3>
+    <p>
+        A policy claiming &ldquo;nothing&rdquo; would be untrue and would undermine everything else
+        in this document. The following is the complete list of what our storage layer necessarily
+        reveals, and what we do about each item:
+    </p>
+
+    <table>
+        <thead>
+            <tr><th>What exists</th><th>What it could reveal</th><th>What we do about it</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Account identifier</td>
+                <td>That an account exists</td>
+                <td>Opaque. Not linked by us to a name, email, or device.</td>
+            </tr>
+            <tr>
+                <td>Stored blob length</td>
+                <td>Roughly how much data you have</td>
+                <td>Padded to power-of-two buckets starting at 4&nbsp;KiB, so length indicates a
+                    coarse magnitude and <em>not</em> a record count.</td>
+            </tr>
+            <tr>
+                <td>Version counter on each blob</td>
+                <td>That a write occurred</td>
+                <td>Required for safe concurrent writes. It counts writes, not records; a single
+                    write may carry any number of changes.</td>
+            </tr>
+            <tr>
+                <td>Time a write is received</td>
+                <td>When you used the app</td>
+                <td>Clients batch writes and add jitter, so arrival time does not correspond to the
+                    moment you logged a record.</td>
+            </tr>
+            <tr>
+                <td>Entitlement boolean</td>
+                <td>Whether you have paid</td>
+                <td>One bit. Carries no health information.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>F. Aggregate usage statistics</h3>
+    <p>
+        We maintain anonymous aggregate counts of which procedures are most commonly logged across
+        the platform, so we know which entries in our reference catalog deserve verification effort
+        and refinement. These counts are population totals. They are not, and by construction cannot
+        be, associated with any individual account.
+    </p>
+    <p>That claim does not rest on a schema. It rests on four constraints, each of which is
+    enforced rather than merely intended, and each of which is load-bearing:</p>
+    <ol>
+        <li><strong>No IP address is retained anywhere in the chain.</strong> The client address is
+        stripped from the connection by the first component in our request pipeline, before any
+        other handler, logger, or metric can observe it. Forwarded-address headers are removed at
+        the same point. Automated tests fail our build if any component that would record a client
+        address is introduced. Nothing in this application rate-limits, partitions, geolocates, or
+        shards by client address, because there is no client address to use.</li>
+        <li><strong>Usage counts carry no authentication token.</strong> A count sent with a
+        credential attached is an identified count, whatever its payload says. Usage reporting is
+        unauthenticated by design, so no server-side moment exists in which a counter and an account
+        identity are present in the same request.</li>
+        <li><strong>One counter per report, never a set.</strong> A report containing
+        &ldquo;three of procedure X and two of procedure Y&rdquo; is a fingerprint that describes a
+        person. Counts are reported singly.</li>
+        <li><strong>Batched, with jitter.</strong> Arrival time is a timestamp whether or not anyone
+        stores it. Counts do not leave your device at the moment you log a record.</li>
+    </ol>
+    <p>
+        If a future change would make any one of these four constraints untrue, this policy changes
+        in the same release, or the change does not ship.
+    </p>
+
+    <h3>G. Support correspondence</h3>
+    <p>
+        If you email us, we hold your message and your email address so we can reply. Please do not
+        include details of your medical procedures in a support email &mdash; we do not need them,
+        we cannot use them to help you, and an email is not protected by the encryption described
+        above.
+    </p>
+</div>
+
+<div class="section">
+    <h2>5. Information we do <em>not</em> collect</h2>
+    <ul>
+        <li><strong>Your location.</strong> The app never requests location permission &mdash; not
+        coarse, not precise, not once. This is a permanent product rule, not a current default. We
+        will not build a feature that logs a procedure at the facility you are standing in.</li>
+        <li><strong>Your IP address.</strong> Removed from the connection before anything downstream
+        can observe it, and excluded from web server request logging.</li>
+        <li><strong>Analytics or behavioural telemetry.</strong> No analytics SDK is present in the
+        application. No screen views, no session recording, no funnels, no event streams.</li>
+        <li><strong>Crash reports containing anything clinical.</strong> Crash reporting is off by
+        default. If it is ever enabled, it will carry no screen names, view names, record
+        identifiers, catalog identifiers, or search terms. Automated build checks fail on any
+        clinical term appearing in a type, member, or route name.</li>
+        <li><strong>Advertising identifiers.</strong> The app contains no advertising SDK and serves
+        no advertisements.</li>
+        <li><strong>Contacts, photos, calendar, microphone, camera, or SMS.</strong></li>
+        <li><strong>Data from Apple Health, Google Health Connect, or any other health
+        platform.</strong> The app neither reads from nor writes to them.</li>
+        <li><strong>Data from your providers, insurers, imaging facilities, or health information
+        exchanges.</strong> Everything in your history is there because you typed it.</li>
+        <li><strong>Biometric identifiers.</strong> Where you unlock the app or a platform key store
+        with a fingerprint or face, that check happens entirely on your device, through the
+        operating system. We never receive biometric data.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>6. How we use what we hold</h2>
+    <p>The only permitted uses of the information in Section 4 are:</p>
+    <ul>
+        <li>Authenticating you and associating your session with your encrypted blobs</li>
+        <li>Storing and returning your ciphertext so your history survives a lost or replaced device</li>
+        <li>Detecting and rejecting conflicting concurrent writes so a sync cannot lose data</li>
+        <li>Determining whether your account holds a paid entitlement</li>
+        <li>Preventing abuse of the service, using per-account limits only</li>
+        <li>Improving the accuracy and coverage of our public reference catalog, using the aggregate
+            counts described in Section 4(F)</li>
+        <li>Responding to you when you contact us</li>
+    </ul>
+    <p class="highlight">
+        We cannot use your health records for any purpose whatsoever, including our own, because we
+        cannot read them. We do not profile you, score you, or evaluate your records &mdash; we
+        could not do so even if we wanted to.
+    </p>
+</div>
+
+<div class="section">
+    <h2>7. Encryption standard</h2>
+    <p>
+        Stated specifically, so that it can be evaluated rather than taken on faith. These parameters
+        are implemented, verified against byte-for-byte conformance vectors in continuous
+        integration on every client platform, and amended in the same commit as any change to the
+        cryptography.
+    </p>
+
+    <table>
+        <thead>
+            <tr><th>Property</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Content encryption</td><td>AES-256-GCM (NIST SP 800-38D)</td></tr>
+            <tr><td>Key length</td><td>256 bits</td></tr>
+            <tr><td>Nonce</td><td>96 bits, from a cryptographically secure RNG, unique per encryption</td></tr>
+            <tr><td>Authentication tag</td><td>128 bits</td></tr>
+            <tr><td>Additional authenticated data</td><td>The envelope header (version, key id, nonce)</td></tr>
+            <tr><td>Key derivation</td><td>HKDF-SHA256 (RFC 5869), extract-then-expand</td></tr>
+            <tr><td>Key wrapping</td><td>AES-256-GCM</td></tr>
+            <tr><td>Reference catalog signing</td><td>Ed25519, public key pinned in each app binary</td></tr>
+            <tr><td>Recovery code</td><td>128 bits of system-generated entropy, with a checksum</td></tr>
+            <tr><td>Transport</td><td>TLS 1.2 or higher</td></tr>
+        </tbody>
+    </table>
+
+    <p>
+        Implementations use platform-native cryptographic providers only &mdash; no bundled
+        third-party crypto library. Negative conformance vectors covering tampered tags, tampered
+        ciphertext, rewritten key identifiers, version downgrade, and wrong keys must all be
+        rejected for a build to pass.
+    </p>
+    <p>
+        Because payloads are already ciphertext before transmission, TLS is a second layer rather
+        than the only one: a transport failure would expose ciphertext, not records. Data at rest on
+        our servers is ciphertext in a database that has never seen the key. Data at rest on your
+        device is additionally protected by platform facilities &mdash; encrypted local storage
+        keyed through the Android Keystore or the iOS Keychain with file protection.
+    </p>
+
+    <h3>Key custody</h3>
+    <ul>
+        <li>The DEK is generated on your device, at first record.</li>
+        <li>The DEK never leaves your device in unwrapped form. It is never transmitted to, stored
+        on, or derivable by any server operated by Apex or by any processor.</li>
+        <li>Wrapped copies are held server-side and are opaque to us: they are ciphertexts of your
+        key under keys we do not have.</li>
+        <li>Wraps are produced independently by your platform key store (Android Keystore via Block
+        Store, or the iOS Keychain) and by your recovery code.</li>
+        <li>Where a platform&rsquo;s backup service cannot provide end-to-end encryption for the
+        wrapped key, the app will not enable cloud backup of it, and a recovery code becomes
+        mandatory instead. Your key does not reach a platform vendor unprotected.</li>
+    </ul>
+    <p class="highlight">
+        Apex Technology Group, Inc. cannot decrypt a user&rsquo;s health records. There is no key
+        escrow, no administrative override, and no recovery path that does not run through the
+        user&rsquo;s own device or their recovery code.
+    </p>
+</div>
+
+<div class="section">
+    <h2>8. Recovery, and irreversible loss</h2>
+    <div class="warn">
+        <p><strong>Read this before you rely on the app to keep your history.</strong></p>
+        <p>
+            Your records are recoverable to a new device in two ways: through your platform key
+            store, if the platform successfully migrates it, or through your recovery code.
+            <strong>If neither is available, your history cannot be recovered by anyone, including
+            us.</strong> There is no exception, no escalation, and no support ticket that changes
+            this.
+        </p>
+        <p>
+            Please set up your recovery code when the app offers it, store it somewhere you will
+            still have it in two years, and export a PDF copy of your history periodically. A
+            recovery code is a passphrase; treat it as one. Anyone who obtains both your recovery
+            code and access to your account can read your history.
+        </p>
+    </div>
+    <p>
+        We detect the state in which your account holds server-side data that your device cannot
+        open, and we tell you so directly rather than showing you an empty history. We also give you
+        practical routes to rebuild it &mdash; a prior PDF export, your own paperwork, or a list of
+        studies with dates from your imaging facility.
+    </p>
+</div>
+
+<div class="section">
+    <h2>9. Third parties</h2>
+    <p>
+        Each of the following operates under its own privacy policy, which governs how it handles
+        anything it receives. None of them receives readable health information from us, because we
+        do not have any to give.
+    </p>
+
+    <table>
+        <thead>
+            <tr><th>Service</th><th>Role</th><th>What it receives</th><th>Policy</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Firebase Authentication (Google)</td>
+                <td>Sign-in and session management</td>
+                <td>The identity information required to authenticate you, per your chosen sign-in
+                    method. No health data. No encryption key, ever.</td>
+                <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>Amazon Web Services (Lightsail)</td>
+                <td>Hosting for the MySievert API and database</td>
+                <td>Ciphertext, account identifiers, entitlement booleans. Nothing readable.</td>
+                <td><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>Google Play Services &mdash; Block Store</td>
+                <td>Device-to-device transfer of your <em>wrapped</em> key on Android</td>
+                <td>An encrypted 32-byte key wrap, end-to-end encrypted. Not enabled where the
+                    platform cannot provide end-to-end encryption.</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>Apple iCloud Keychain</td>
+                <td>Device-to-device transfer of your <em>wrapped</em> key on iOS</td>
+                <td>An encrypted key wrap, under Apple&rsquo;s end-to-end encrypted keychain sync.</td>
+                <td><a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>Google Play / Apple App Store</td>
+                <td>App distribution and, if offered, in-app purchases</td>
+                <td>A product identifier and a transaction identifier. We never receive your card
+                    number, billing address, or store account password.</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Not present in this product:</strong> advertising networks, analytics providers, data
+    brokers, attribution SDKs, tag managers, session-replay tools, customer data platforms, and
+    third-party crash reporters.</p>
+</div>
+
+<div class="section">
+    <h2>10. Disclosure to others</h2>
+    <p>We disclose personal data only in these circumstances:</p>
+    <ul>
+        <li><strong>To processors,</strong> as listed in Section 9, strictly to operate the service
+        and under contractual restrictions on their use of it.</li>
+        <li><strong>When you direct us to,</strong> such as when you export your history yourself
+        and choose where to send it.</li>
+        <li><strong>To comply with law,</strong> where we receive a valid and binding legal demand.</li>
+        <li><strong>In a business transfer,</strong> if Apex is acquired or merges. A successor is
+        bound by this policy for data collected under it, or must obtain your consent to any
+        materially different treatment. Note that a successor inherits the same architecture and so
+        inherits the same inability to read your history.</li>
+    </ul>
+    <div class="callout">
+        <p><strong>What we can produce in response to a subpoena, warrant, or court order.</strong>
+        An account identifier, an entitlement boolean, and two arrays of bytes that neither we nor
+        the requesting party can decrypt. We will not build a mechanism to defeat this, and we would
+        contest an order requiring us to do so. We cannot, however, promise to defeat an order
+        directed at your device or your sign-in provider &mdash; that is outside our control.</p>
+    </div>
+    <p class="highlight">
+        We have never sold personal data, we do not sell it, and we do not share it for
+        cross-context behavioural advertising.
+    </p>
+</div>
+
+<div class="section">
+    <h2>11. Retention and deletion</h2>
+    <p>
+        We retain your encrypted blobs, account identifier, and entitlement boolean for as long as
+        your account exists. There is nothing else to retain.
+    </p>
+    <p>
+        You can delete your account from within the app, or by emailing us. Deletion removes your
+        account record, your encrypted vault, and your encrypted key wraps from our production
+        systems. Because we hold no derived data, no analytics rows, and no activity table, there is
+        no second copy of your information anywhere for us to miss.
+    </p>
+    <p>
+        Deletion propagates to our processors within thirty (30) days, including expiry from routine
+        encrypted backups. Aggregate counts described in Section 4(F) are not deleted, because they
+        are population totals that were never associated with you and cannot be traced back to you.
+    </p>
+    <p class="highlight">
+        Deletion is permanent. Once deleted, your history cannot be restored by us under any
+        circumstances.
+    </p>
+    <p>
+        Deleting the app from your device does not delete your account. Deleting your account does
+        not cancel a store subscription; manage that through Google Play or the App Store.
+    </p>
+</div>
+
+<div class="section">
+    <h2>12. Your rights</h2>
+    <p>Subject to applicable law, you have the right to:</p>
+    <ul>
+        <li><strong>Know</strong> what we collect, why, and with whom we share it &mdash; this
+        document, which we intend to be complete.</li>
+        <li><strong>Access</strong> the personal data we hold about you. In practice this is your
+        account identifier, your entitlement boolean, and your ciphertext. We can return the
+        ciphertext; we cannot render it readable, and neither can anyone else without your key.</li>
+        <li><strong>Export</strong> your history. This is done in the app, on your device, where
+        your data is readable &mdash; PDF export is built for exactly this.</li>
+        <li><strong>Correct</strong> your data. Records are corrected in the app; we cannot correct
+        what we cannot read.</li>
+        <li><strong>Delete</strong> your account and everything associated with it.</li>
+        <li><strong>Withdraw consent</strong> to any optional processing, at any time, without
+        losing access to the core function of the app.</li>
+        <li><strong>Not be discriminated against</strong> for exercising any of these rights. We do
+        not charge different prices or degrade the service in response.</li>
+        <li><strong>Appeal</strong> a decision we make on a rights request. See Section 15.</li>
+    </ul>
+    <p>
+        Email <a href="mailto:apex@apextechnologygroup.io">apex@apextechnologygroup.io</a> to
+        exercise any of these. We will verify your request by requiring you to act from the account
+        in question, and we will respond within 45 days, extendable once by a further 45 days where
+        the law permits and we tell you why.
+    </p>
+</div>
+
+<div class="section">
+    <h2>13. HIPAA does not apply, and what that means</h2>
+    <p>
+        Apex Technology Group, Inc. is not a covered entity and, in operating MySievert, is not a
+        business associate. HIPAA does not govern this app, and we do not claim that it does.
+        Information you enter here is not protected health information under HIPAA merely because it
+        is medical in nature.
+    </p>
+    <p>
+        We say this plainly because &ldquo;HIPAA compliant&rdquo; is a claim that is frequently made
+        and rarely true of consumer apps. Your protection here comes from the architecture in
+        Sections 3 and 7 &mdash; which is, for this narrow purpose, a stronger guarantee than a
+        regulatory one, because it does not depend on our good behaviour.
+    </p>
+    <p>
+        The FTC Health Breach Notification Rule does apply to us. See Section 14.
+    </p>
+</div>
+
+<div class="section">
+    <h2>14. Security incidents and breach notification</h2>
+    <p>
+        We are subject to the FTC Health Breach Notification Rule, including its 2024 amendments,
+        under which an unauthorised <em>disclosure</em> &mdash; not only an intrusion &mdash; is a
+        reportable breach.
+    </p>
+    <p>
+        If we discover a breach of security involving personal data we hold, we will notify affected
+        users and the Federal Trade Commission within the timeframes the Rule requires, and any
+        other regulator entitled to notice under applicable state or foreign law. Where the law sets
+        a 60-day individual notification clock, we will meet it.
+    </p>
+    <p>
+        The Rule&rsquo;s notification duties attach to <em>unsecured</em> health information. Records
+        encrypted on the user&rsquo;s device under keys our servers never hold are a strong case for
+        falling outside that definition, and our encryption standard is documented and dated for
+        exactly that reason. We will not, however, use that position as a reason to stay silent: if
+        our systems are breached, we will tell affected users what happened, whether or not a
+        notification duty is triggered.
+    </p>
+    <p>
+        No system can guarantee absolute security. What we can guarantee is that an attacker who
+        obtains our database obtains ciphertext, and that we have not kept a key anywhere for them
+        to find.
+    </p>
+    <p>
+        To report a vulnerability, email
+        <a href="mailto:apex@apextechnologygroup.io">apex@apextechnologygroup.io</a>. We will not
+        pursue legal action against good-faith security research that respects user privacy, avoids
+        service degradation, and gives us reasonable time to remediate before disclosure.
+    </p>
+</div>
+
+<div class="section">
+    <h2>15. Regional notices</h2>
+
+    <h3>Washington, Nevada, Connecticut, and other consumer health data laws</h3>
+    <p>
+        Consumer health data is addressed in our separate
+        <a href="mysievertCHDPP.html">Consumer Health Data Privacy Policy</a>, provided as a
+        distinct document with its own link as the Washington My Health My Data Act requires. It
+        also covers Nevada SB 370, the health-data provisions of Connecticut&rsquo;s and New
+        York&rsquo;s laws, and equivalent requirements elsewhere.
+    </p>
+    <p class="highlight">
+        We do not sell consumer health data, and we do not operate or permit any geofence around any
+        healthcare facility. The app never requests location permission, so we have no means to.
+    </p>
+
+    <h3>California (CCPA / CPRA)</h3>
+    <p>
+        In the twelve months preceding the effective date of this policy, we collected the
+        categories of personal information described in Section 4: identifiers (an opaque account
+        identifier), commercial information (an entitlement boolean), and sensitive personal
+        information in the form of health information &mdash; which we hold only as ciphertext we
+        cannot read. We collected it for the purposes in Section 6, from you.
+    </p>
+    <ul>
+        <li>We have not sold personal information and do not sell it.</li>
+        <li>We have not shared personal information for cross-context behavioural advertising.</li>
+        <li>We do not use or disclose sensitive personal information beyond the purposes permitted
+        by CPRA section 7027(m), so no &ldquo;Limit the Use of My Sensitive Personal
+        Information&rdquo; link is required &mdash; but we would honour such a request anyway.</li>
+        <li>We do not knowingly collect or sell the personal information of consumers under 16.</li>
+        <li>You may designate an authorised agent to make a request on your behalf; we will require
+        proof of that authorisation.</li>
+    </ul>
+
+    <h3>Other U.S. state privacy laws</h3>
+    <p>
+        Residents of states with comprehensive consumer privacy laws &mdash; including Virginia,
+        Colorado, Connecticut, Utah, Texas, Oregon, Montana, and others &mdash; have rights of
+        access, correction, deletion, portability, and opt-out of targeted advertising, sale, and
+        profiling with legal or similarly significant effects. We conduct none of those three
+        activities. Where health information is treated as sensitive data requiring opt-in consent,
+        we obtain that consent in the app before any collection.
+    </p>
+    <p>
+        <strong>Appeals.</strong> If we decline a rights request, we will tell you why, and you may
+        appeal by replying to our response or emailing
+        <a href="mailto:apex@apextechnologygroup.io">apex@apextechnologygroup.io</a> with
+        &ldquo;Appeal&rdquo; in the subject line. We will decide the appeal within 60 days and, if we
+        deny it, tell you how to contact your state Attorney General.
+    </p>
+
+    <h3>European Economic Area, United Kingdom, and Switzerland (GDPR / UK GDPR)</h3>
+    <p>
+        Where MySievert is offered in these jurisdictions, Apex Technology Group, Inc. is the
+        controller. Our legal bases are:
+    </p>
+    <ul>
+        <li><strong>Article 6(1)(b) &mdash; contract:</strong> for the account identifier, ciphertext
+        storage, and entitlement processing needed to give you the service you asked for.</li>
+        <li><strong>Article 9(2)(a) &mdash; explicit consent:</strong> for health data. Health data
+        is special category data, and we rely on your explicit, separately obtained, freely given
+        consent, requested in the app before any health record is created. You may withdraw it at
+        any time, which does not affect the lawfulness of processing before withdrawal.</li>
+        <li><strong>Article 6(1)(f) &mdash; legitimate interests:</strong> for keeping the service
+        secure and preventing abuse, balanced against your rights and implemented with per-account
+        limits rather than any address-based or behavioural tracking.</li>
+    </ul>
+    <p>
+        You have the rights of access, rectification, erasure, restriction, portability, and
+        objection, and the right to lodge a complaint with your local supervisory authority. Personal
+        data is processed on servers in the United States; transfers rely on the Standard
+        Contractual Clauses or another valid mechanism. Because the data transferred is ciphertext
+        under a key held only on your device, the supplementary-measures analysis is unusually
+        simple: an authority compelling our host obtains bytes nobody can read.
+    </p>
+    <p>
+        We do not carry out automated decision-making producing legal or similarly significant
+        effects. In particular, the app performs no assessment, scoring, classification, or
+        interpretation of your health records.
+    </p>
+
+    <h3>Canada (PIPEDA) and other jurisdictions</h3>
+    <p>
+        Where PIPEDA or a comparable law applies, we obtain express consent for health information,
+        limit collection to the purposes identified in Section 6, and honour access and correction
+        requests through the process in Section 12.
+    </p>
+</div>
+
+<div class="section">
+    <h2>16. Children</h2>
+    <p>
+        MySievert is intended for adults. It is not directed to children, and we do not knowingly
+        collect personal information from anyone under 18. If you believe a child has created an
+        account, contact us and we will delete it.
+    </p>
+    <p>
+        An adult may log procedures relating to a child or another person in their care within their
+        own account. Those records are the adult&rsquo;s account data, encrypted like any other, and
+        the adult is responsible for the authority to record them.
+    </p>
+</div>
+
+<div class="section">
+    <h2>17. Changes to this policy</h2>
+    <p>
+        We may update this policy. If a change is material &mdash; and in particular if it would
+        affect any statement in Sections 1, 3, 4, 5, or 7 &mdash; we will update the effective date,
+        describe the change in the app, and, where the change concerns consumer health data or
+        special category data, obtain your consent before it takes effect for data already
+        collected.
+    </p>
+    <p>
+        We will not retroactively apply a weaker policy to data collected under a stronger one.
+    </p>
+</div>
+
+<div class="section">
+    <h2>18. Contact</h2>
+    <p>
+        <strong>Email:</strong> <a href="mailto:apex@apextechnologygroup.io">apex@apextechnologygroup.io</a><br>
+        <strong>Company:</strong> Apex Technology Group, Inc.<br>
+        <strong>Subject line for privacy requests:</strong> &ldquo;Privacy Request &mdash; MySievert&rdquo;
+    </p>
+    <p>
+        Related documents:
+        <a href="mysievertTOS.html">Terms of Service</a> &middot;
+        <a href="mysievertCHDPP.html">Consumer Health Data Privacy Policy</a>
+    </p>
+</div>
+
+<div class="footer">
+    &copy; 2026 Apex Technology Group, Inc. All rights reserved.
+</div>
+
+</body>
+</html>
