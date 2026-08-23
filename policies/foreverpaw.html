@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forever Paw Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            max-width: 900px;
+            color: #222;
+        }
+        h1, h2 { color: #1f3a5f; }
+        h1 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        h3 { color: #2c4a72; margin-top: 24px; }
+        ul, ol { margin-left: 20px; }
+        .section { margin-top: 30px; }
+        .highlight { font-weight: bold; }
+        .callout {
+            background: #f4f7fb;
+            border-left: 4px solid #1f3a5f;
+            padding: 12px 16px;
+            margin: 16px 0;
+        }
+        .warn {
+            background: #fdf6f6;
+            border-left: 4px solid #b00020;
+            padding: 12px 16px;
+            margin: 16px 0;
+        }
+        .warn strong { color: #b00020; }
+        table {
+            border-collapse: collapse;
+            margin: 16px 0;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.95em;
+        }
+        th { background: #f0f4f8; color: #1f3a5f; }
+        code {
+            background: #f4f4f4;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .footer { margin-top: 40px; font-size: 0.9em; color: #666; }
+        a { color: #1f3a5f; }
+    </style>
+</head>
+<body>
+
+<h1>Forever Paw Privacy Policy</h1>
+<p><strong>Effective Date:</strong> 23 August 2026</p>
+<p><strong>Last Updated:</strong> 23 August 2026</p>
+<p><strong>Application:</strong> Forever Paw</p>
+<p><strong>Company:</strong> Apex Technology Group, Inc. (&ldquo;Apex,&rdquo; &ldquo;Forever Paw,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;)</p>
+
+<div class="callout">
+    <p>
+        Forever Paw pairs short daily training with a timeline of your dog&rsquo;s life. To do that
+        it stores what you put into it &mdash; your dog&rsquo;s profile, your photographs, your
+        videos, your recordings, and the things you write. This policy explains exactly what we
+        hold, where it goes, how long we keep it, and how to get it back or delete it.
+    </p>
+    <p class="highlight">
+        We do not sell your personal data. We do not use your photographs or your writing to train
+        AI models. We never show advertising to subscribers, and we never target advertising using
+        your dog&rsquo;s timeline.
+    </p>
+</div>
+
+<div class="section">
+    <h2>1. Scope</h2>
+    <p>
+        This policy covers the Forever Paw mobile applications and the Forever Paw API operated by
+        Apex Technology Group, Inc., a Delaware corporation. Apex is the controller of the personal
+        data described here.
+    </p>
+    <p>
+        Forever Paw is about a dog, but the data is about <em>you</em> &mdash; your account, your
+        photographs, your words, and where you went. We treat it that way throughout.
+    </p>
+</div>
+
+<div class="section">
+    <h2>2. What we collect</h2>
+
+    <h3>A. Account information</h3>
+    <p>
+        You sign in with Apple or with Google, through Firebase Authentication. From that we receive
+        and store:
+    </p>
+    <ul>
+        <li>Your email address (or the private relay address, if you use Sign in with Apple and
+        choose to hide your email)</li>
+        <li>Your display name, if your provider supplies one</li>
+        <li>Your profile photo URL, if your provider supplies one</li>
+        <li>A Firebase user identifier, which we use as your account key</li>
+        <li>Account creation and last sign-in timestamps</li>
+    </ul>
+    <p>
+        We never receive or store your Apple ID or Google password. Your last sign-in time matters
+        more than it looks &mdash; it is what the idle-account lifecycle in Section 10 runs on.
+    </p>
+
+    <h3>B. Your preferences</h3>
+    <p>
+        Your daily reminder time and your IANA time zone. The time zone is necessary because streaks
+        are counted in <em>your</em> local days, and a reminder sent at the wrong local hour is
+        worse than no reminder.
+    </p>
+
+    <h3>C. Your dog&rsquo;s profile</h3>
+    <p>
+        Name, photograph, breed and whether mixed, birth date, gotcha day, size, energy level,
+        temperament tags, current skills, and the training goals you choose. Also whether the dog is
+        active or in Forever Mode, and an optional date of passing if you choose to record one.
+    </p>
+
+    <h3>D. Memories &mdash; the timeline</h3>
+    <p>This is the heart of the product and the most personal data we hold:</p>
+    <ul>
+        <li><strong>Photographs</strong> you upload, and thumbnails we generate from them</li>
+        <li><strong>Videos</strong> you upload</li>
+        <li><strong>Audio recordings</strong>, including the voice recordings attached to
+        &ldquo;Letters to My Dog&rdquo;</li>
+        <li><strong>Titles, captions, and body text</strong> you write</li>
+        <li>The date each memory occurred, and whether it was created by you or automatically by a
+        milestone</li>
+    </ul>
+
+    <h3>E. Places</h3>
+    <p>
+        A memory may optionally carry a place name and coordinates. This is <strong>per-memory and
+        opt-in</strong>: a place is attached only to a memory you are saving, only when you choose
+        to attach one.
+    </p>
+    <p class="highlight">
+        Forever Paw does not track your location in the background, does not build a movement
+        history, and does not record where you are except when you deliberately tag a memory.
+        Location is never used for advertising.
+    </p>
+    <p>
+        Where the app asks your device for a location to help you tag a place, it asks at that
+        moment and you can decline and type a place name instead, or attach no place at all. Places
+        you have tagged are rolled up into a per-dog list, and place <em>names</em> are used in AI
+        recaps (Section 5). Coordinates are not sent to the AI provider.
+    </p>
+
+    <h3>F. Training activity</h3>
+    <p>
+        Which programme your dog is enrolled in, every challenge you complete, how it went, the
+        local date it happened, your streak, and the achievements your dog has earned. Outcomes are
+        also used to adapt the next session&rsquo;s difficulty.
+    </p>
+
+    <h3>G. Personality answers</h3>
+    <p>Your answers to the twelve prompts about what makes your dog theirs.</p>
+
+    <h3>H. Medication and vaccine records</h3>
+    <p>
+        If you use the reminder feature: the medication or vaccine name you enter, the schedule you
+        set, doses you record as given, and the resulting history. This is information about your
+        dog, entered by you.
+    </p>
+    <div class="warn">
+        <p><strong>Forever Paw is not veterinary advice.</strong> It keeps track of what you enter
+        and reminds you when you ask it to. It never interprets a drug, checks a dose, or warns you
+        about anything. Always follow your vet&rsquo;s instructions and contact them with any
+        question about your dog&rsquo;s health or medication.</p>
+    </div>
+
+    <h3>I. Devices and notifications</h3>
+    <p>
+        A push notification token for each device you sign in on, its platform (iOS or Android), and
+        when it was registered and last seen. Tokens are stored on your account record so that
+        deleting your account takes them with it.
+    </p>
+
+    <h3>J. Subscription and purchase information</h3>
+    <p>
+        If you subscribe to Forever Paw+, we store a record of your entitlement: the product you
+        bought (monthly or yearly), its status, the current period dates, and identifiers Apple or
+        Google provide so we can verify and maintain it. We also receive server notifications from
+        the app store about renewal, cancellation, refund, billing retry, and grace period, so your
+        access matches what you have actually paid for.
+    </p>
+    <p class="highlight">
+        We never receive your payment card number, billing address, or store account password. All
+        payment processing is handled by Apple or Google.
+    </p>
+    <p>
+        Some accounts are marked as complimentary by us (for testing, support, or as a gift). That
+        is a flag on your account and involves no payment data at all.
+    </p>
+
+    <h3>K. Usage accounting</h3>
+    <p>We keep two internal ledgers so that limits can be enforced fairly:</p>
+    <ul>
+        <li><strong>AI usage</strong> &mdash; which feature you invoked, when, how many tokens or
+        images it consumed, and the estimated cost. It records the shape of a call, not its
+        content.</li>
+        <li><strong>Stored media</strong> &mdash; the size of each object you store, so we can show
+        your storage against your plan&rsquo;s cap and enforce it.</li>
+    </ul>
+
+    <h3>L. Advertising data (free tier only)</h3>
+    <p>
+        If you are on the free tier, the app shows occasional full-screen advertisements served by
+        <strong>Google AdMob</strong> when you submit content. AdMob collects data directly from
+        your device to deliver and measure those ads, which may include:
+    </p>
+    <ul>
+        <li>A device advertising identifier</li>
+        <li>Approximate location derived from your IP address (city or region level &mdash; not your
+        device GPS, and not the places you tag)</li>
+        <li>Device type, operating system version, and language</li>
+        <li>Ad interaction data such as impressions, clicks, and view duration</li>
+    </ul>
+    <p class="highlight">
+        No Forever Paw content is ever used for advertising. AdMob does not receive your
+        dog&rsquo;s profile, your photographs, your videos, your recordings, your memories, your
+        tagged places, your training history, or your medication records. We do not link ad data to
+        your Forever Paw account.
+    </p>
+    <p>
+        <strong>Subscribers see no advertising at all</strong>, and the ad SDK is not asked to serve
+        anything for a subscriber. Section 6 explains your choices.
+    </p>
+
+    <h3>M. Email and support correspondence</h3>
+    <p>
+        We use your email address to send account and service messages, including the
+        idle-account notices described in Section 10, and to reply when you contact support. If you
+        email us, we hold your message and address so we can respond.
+    </p>
+
+    <h3>N. Technical and diagnostic data</h3>
+    <p>
+        Ordinary server logs necessary to operate and secure the service &mdash; request paths,
+        status codes, timing, and error diagnostics. We do not run a third-party product-analytics
+        SDK or a session-replay tool.
+    </p>
+</div>
+
+<div class="section">
+    <h2>3. What we do <em>not</em> collect</h2>
+    <ul>
+        <li><strong>No background or continuous location.</strong> See Section 2(E).</li>
+        <li><strong>No facial recognition or biometric identification</strong> of people or of dogs.
+        We do not detect, match, or index faces in your photographs.</li>
+        <li><strong>No contacts, calendar, or SMS access</strong>, and no microphone access beyond a
+        recording you deliberately make for a letter.</li>
+        <li><strong>No human health data.</strong> Forever Paw does not read from or write to Apple
+        Health, Google Health Connect, or any other health platform.</li>
+        <li><strong>No payment card details.</strong></li>
+        <li><strong>No data brokers.</strong> We buy no data about you.</li>
+        <li><strong>No use of your content for advertising or for AI training.</strong></li>
+    </ul>
+
+    <h3>Photo metadata</h3>
+    <p class="highlight">
+        We strip EXIF metadata from every image at upload, before storing it.
+    </p>
+    <p>
+        Phone photographs routinely carry the GPS coordinates, device model, and timestamp of where
+        and how they were taken. We remove that metadata rather than storing it, so a photograph in
+        your timeline does not silently carry your home address. Orientation is applied to the image
+        first so the picture still looks right.
+    </p>
+</div>
+
+<div class="section">
+    <h2>4. How we use your information</h2>
+    <ul>
+        <li>To authenticate you and keep you signed in</li>
+        <li>To store and display your dog&rsquo;s profile, timeline, and training progress</li>
+        <li>To recommend a training programme and adapt session difficulty from your recorded
+        outcomes</li>
+        <li>To award achievements and write the resulting milestone memories to the timeline</li>
+        <li>To compute and display streaks in your local time zone</li>
+        <li>To send the notifications you have asked for &mdash; training reminders, medication
+        reminders, and anniversary milestones</li>
+        <li>To generate the AI features you invoke, and the scheduled recaps and digests your plan
+        includes (Section 5)</li>
+        <li>To determine your plan, enforce its limits, and show your usage against them</li>
+        <li>To show advertising on the free tier (Section 6)</li>
+        <li>To send account, billing, and idle-account lifecycle emails (Section 10)</li>
+        <li>To operate, secure, debug, and improve the service</li>
+        <li>To respond to you when you contact support</li>
+        <li>To comply with legal obligations</li>
+    </ul>
+    <p class="highlight">
+        We do not use your content for advertising, for profiling, or for training machine learning
+        models &mdash; ours or anyone else&rsquo;s.
+    </p>
+</div>
+
+<div class="section">
+    <h2>5. AI features and OpenAI</h2>
+
+    <p>
+        Several features are produced by a third-party AI provider, <strong>OpenAI</strong>: story
+        recaps, weekly progress summaries, suggested captions, memory prompts, and caricature or
+        painted portraits. This section says exactly what leaves our servers.
+    </p>
+
+    <h3>What is sent for text features</h3>
+    <p>When you generate a recap, a digest, a caption, or a memory prompt, we send:</p>
+    <ul>
+        <li>Your dog&rsquo;s name, breed, birth date, and gotcha day</li>
+        <li>The period covered, and counts of training sessions completed</li>
+        <li>Milestone names your dog reached in that period</li>
+        <li><strong>The memories you saved in that period &mdash; their dates, titles, and the body
+        text you wrote</strong></li>
+        <li><strong>Place names</strong> you attached to those memories, and how often you visited
+        each</li>
+        <li>Your personality answers</li>
+    </ul>
+
+    <h3>What is sent for portraits</h3>
+    <p>
+        The photograph you select. It is resized and <strong>its EXIF metadata is stripped before it
+        leaves our server.</strong>
+    </p>
+
+    <h3>What is never sent</h3>
+    <ul>
+        <li>Your name, your email address, or your account identifier</li>
+        <li>Your device push tokens or any advertising identifier</li>
+        <li>Place <em>coordinates</em> &mdash; only the place name you typed or chose</li>
+        <li>Your videos or your audio recordings</li>
+        <li>Your medication records</li>
+        <li>Your subscription or payment information</li>
+    </ul>
+
+    <h3>Terms that apply</h3>
+    <ul>
+        <li>We use OpenAI&rsquo;s API under its business terms. <strong>OpenAI does not use data
+        submitted through the API to train its models</strong> under those terms.</li>
+        <li>OpenAI may retain API inputs and outputs for a limited period for abuse monitoring, per
+        its own policy, and then delete them.</li>
+        <li>OpenAI&rsquo;s handling of what it receives is governed by its policies:
+        <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">privacy
+        policy</a> and
+        <a href="https://openai.com/policies/row-terms-of-use" target="_blank" rel="noopener">terms</a>.</li>
+    </ul>
+
+    <h3>Your control</h3>
+    <p>
+        AI features are optional. If you never generate a recap, a caption, a memory prompt, or a
+        portrait, and you turn off scheduled recaps and digests in your settings, none of your
+        content is sent to an AI provider at all. Forever Paw&rsquo;s training, timeline, letters,
+        and reminders all work without it.
+    </p>
+
+    <div class="warn">
+        <p><strong>AI output can be wrong.</strong> A recap may misdescribe an event, get a detail
+        backwards, or write something that reads oddly about a dog you love. A portrait is an
+        artistic generation, not a likeness. Nothing produced by these features is a factual record
+        &mdash; your own memories and photographs are. You can delete any generated story, digest,
+        or portrait.</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>6. Advertising, and your choices</h2>
+
+    <p>
+        Forever Paw&rsquo;s free tier is supported in part by advertising. Advertisements are
+        full-screen, appear after you submit content, and are limited to at most one every few
+        minutes. They are served by Google AdMob.
+    </p>
+
+    <table>
+        <thead>
+            <tr><th></th><th>Free tier</th><th>Forever Paw+</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Advertising shown</td><td>Yes</td><td><strong>Never</strong></td></tr>
+            <tr><td>Ad SDK asked to serve</td><td>Yes</td><td>No</td></tr>
+            <tr><td>Your timeline used for targeting</td><td colspan="2"><strong>Never, on either tier</strong></td></tr>
+        </tbody>
+    </table>
+
+    <h3>What advertisers do and do not get</h3>
+    <p>
+        AdMob receives device-level signals as described in Section 2(L). It does not receive your
+        Forever Paw content, and we do not send it your account identifier or link ad activity back
+        to your account. Data AdMob collects is governed by
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google&rsquo;s
+        advertising policies</a>.
+    </p>
+
+    <h3>Your choices</h3>
+    <ul>
+        <li><strong>Subscribe.</strong> Forever Paw+ removes advertising entirely.</li>
+        <li><strong>Decline tracking.</strong> Where your platform asks for permission to track you
+        across apps and websites, declining means you continue to see advertising, but it is not
+        personalised using a cross-app identifier.</li>
+        <li><strong>Reset or limit your advertising identifier</strong> in your device settings at
+        any time.</li>
+        <li><strong>In the EEA, UK, and Switzerland,</strong> a consent prompt is shown before any
+        personalised advertising, and you may refuse or withdraw consent at any time; refusing
+        means non-personalised ads rather than no app.</li>
+        <li><strong>In California and other U.S. states with an opt-out right,</strong> see Section
+        13 &mdash; you can opt out of any sharing of personal information for cross-context
+        behavioural advertising.</li>
+    </ul>
+
+    <p>
+        We do not knowingly show advertising to anyone under 18, because Forever Paw is not
+        available to them (Section 14).
+    </p>
+</div>
+
+<div class="section">
+    <h2>7. How photos, videos, and recordings are stored and served</h2>
+
+    <p>
+        Media is stored in a <strong>private</strong> Amazon S3 bucket in the United States. The
+        bucket is not world-readable, and files are streamed to the app through our API rather than
+        served directly from the bucket.
+    </p>
+
+    <p>
+        Each stored file has an unguessable key containing a random component. Knowing your
+        dog&rsquo;s identifier is not enough to find its photographs.
+    </p>
+
+    <div class="warn">
+        <p><strong>An honest limitation you should know about.</strong> Media URLs are unguessable
+        but <em>not</em> individually authenticated. This is the same trade every photo host makes:
+        an image loading in a timeline cannot attach a sign-in token, so requiring one would break
+        every picture in the app.</p>
+        <p>The practical consequences are:</p>
+        <ul>
+            <li>Anyone you give a media URL to can open it without signing in.</li>
+            <li>A URL keeps working until the underlying file is removed &mdash; including for a
+            short period after you delete the memory from your timeline.</li>
+            <li>The same protection currently applies to voice recordings as to photographs. We
+            consider a recorded voice to deserve more, and signed, expiring URLs for audio are a
+            planned improvement rather than a shipped one. We would rather tell you that than let
+            you assume otherwise.</li>
+        </ul>
+    </div>
+
+    <p>
+        Media is not encrypted with a key only you hold. Apex personnel with production access could
+        technically view stored files; access is restricted to the minimum personnel needed to
+        operate the service, and we do not browse user content.
+    </p>
+</div>
+
+<div class="section">
+    <h2>8. Notifications and emails</h2>
+    <p>
+        With your permission, we send push notifications: training reminders at your chosen local
+        time, medication reminders when a dose is due, and milestone notifications such as birthdays
+        and gotcha days. Delivery is through Apple Push Notification service and Firebase Cloud
+        Messaging. You can turn these off in the app or your device settings at any time.
+    </p>
+    <p>
+        We also send email, through Amazon SES, for: account and security matters, billing and
+        subscription changes, and the idle-account notices in Section 10. Service and lifecycle
+        emails are not marketing, and you cannot opt out of them while you hold an account &mdash;
+        an email warning you that your photographs are about to be archived is one you should
+        receive.
+    </p>
+    <div class="warn">
+        <p><strong>Do not rely on a reminder for anything that matters medically.</strong> Push
+        delivery is best-effort and depends on your device, your network, your notification
+        settings, and third-party infrastructure we do not control. A reminder can be delayed or
+        never arrive. Use your vet&rsquo;s instructions as the source of truth.</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>9. Who we share data with</h2>
+    <p>
+        We share personal data only with the recipients below, only for the purposes stated, and
+        under contractual restrictions on their use of it.
+    </p>
+
+    <table>
+        <thead>
+            <tr><th>Recipient</th><th>Purpose</th><th>What it receives</th><th>Policy</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Google (Firebase Authentication)</td>
+                <td>Sign-in and session management</td>
+                <td>Identity information from your chosen sign-in method</td>
+                <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>Google (Firebase Cloud Messaging)</td>
+                <td>Push notification delivery</td>
+                <td>Device push tokens and notification content</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td><strong>Google AdMob</strong></td>
+                <td>Advertising, free tier only</td>
+                <td>Device advertising identifier, IP-derived coarse location, device type, ad
+                    events. <strong>No Forever Paw content, no account identifier.</strong></td>
+                <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>Sign in with Apple, push delivery, subscriptions</td>
+                <td>Identity information, device tokens, purchase and transaction identifiers,
+                    subscription status notifications</td>
+                <td><a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>Amazon Web Services</td>
+                <td>Hosting, database, media storage and archival (S3, Glacier)</td>
+                <td>All stored account, timeline, and media data</td>
+                <td><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>Amazon SES</td>
+                <td>Sending account and lifecycle email</td>
+                <td>Your email address and the message content</td>
+                <td><a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+            <tr>
+                <td>OpenAI</td>
+                <td>Recaps, digests, captions, memory prompts, portraits</td>
+                <td>Only what Section 5 lists. No name, email, account id, or coordinates.</td>
+                <td><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>We may also disclose data:</p>
+    <ul>
+        <li><strong>To comply with law,</strong> on receipt of a valid and binding legal demand.</li>
+        <li><strong>To protect rights and safety,</strong> including investigating fraud, abuse, or
+        a threat to someone.</li>
+        <li><strong>In a business transfer,</strong> if Apex is acquired or merges &mdash; a
+        successor is bound by this policy for data collected under it, or must obtain your consent
+        to materially different treatment.</li>
+    </ul>
+
+    <p class="highlight">
+        We do not sell personal data for money.
+    </p>
+    <p>
+        Under some U.S. state privacy laws, using an advertising network can count as
+        &ldquo;sharing&rdquo; personal information for cross-context behavioural advertising. We
+        treat it that way and give you a clear opt-out; see Sections 6 and 13. Subscribers are not
+        subject to it at all, because subscribers see no advertising.
+    </p>
+</div>
+
+<div class="section">
+    <h2>10. Retention, idle accounts, and archival</h2>
+
+    <p class="highlight">
+        We do not delete your dog&rsquo;s photographs because you stopped using the app. Not at nine
+        months, not at nine years.
+    </p>
+    <p>
+        That is a deliberate commitment, and this section explains exactly what does happen instead,
+        because &ldquo;we keep it forever&rdquo; would be a promise with a cost attached and you
+        should see the mechanism.
+    </p>
+
+    <div class="callout">
+        <p><strong>Why the rule is archival and not deletion.</strong></p>
+        <p>
+            The person most likely to stop opening Forever Paw is the person whose dog has died.
+            They are also the person whose timeline matters most, and the one least able to
+            recreate it. An inactivity rule that deleted content would fall hardest on exactly
+            them, and it would do it quietly, months after the worst day of their year, while they
+            were not looking.
+        </p>
+        <p>
+            So there is no inactivity deletion rule in Forever Paw. Long-unopened media is moved to
+            cheaper storage and waits. If you come back in five years &mdash; or your family does
+            &mdash; it is still there.
+        </p>
+    </div>
+
+    <h3>While your account is active</h3>
+    <p>
+        We keep your account, your dog&rsquo;s profile, your timeline, and your media for as long as
+        your account exists. A timeline that expires after ninety days is not a timeline.
+    </p>
+
+    <h3>If you stop signing in</h3>
+    <table>
+        <thead>
+            <tr><th>Time since last sign-in</th><th>What happens</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>6 months</strong></td>
+                <td>We email you. Reminders continue, becoming more frequent as the archive date
+                    approaches, so you are never surprised.</td>
+            </tr>
+            <tr>
+                <td><strong>9 months</strong></td>
+                <td>Full-resolution photographs and videos are moved to long-term cold storage
+                    (Amazon S3 Glacier Deep Archive). <strong>Thumbnails stay online.</strong> Your
+                    whole timeline &mdash; every memory, date, caption, and small picture &mdash;
+                    still opens and still reads normally.</td>
+            </tr>
+            <tr>
+                <td><strong>Whenever you come back</strong></td>
+                <td>We offer to restore your originals, at no charge to you.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <strong>Restoring from cold storage is not instant</strong> &mdash; it takes hours, not
+        seconds. The app will tell you plainly and email you when your originals are back, rather
+        than showing you a spinner.
+    </p>
+    <p>
+        <strong>Subscribers are never archived.</strong> If you have an active subscription your
+        media stays immediately available regardless of how long it has been since you signed in.
+        You will still get the six-month email, because a year of silent billing is its own problem
+        and we would rather you know.
+    </p>
+
+    <h3>If you cancel a subscription while over the free storage limit</h3>
+    <p>
+        Nothing is deleted and nothing is hidden. You keep every photograph, video, letter, and
+        story, and can view, share, and export all of them. What stops is <em>adding</em> new media
+        until you are back under the free limit or subscribe again.
+    </p>
+    <p>
+        You get at least 90 days, with email reminders well beforehand, to resubscribe or download
+        your media. After that, media above the free allowance is <strong>moved to long-term cold
+        storage rather than deleted</strong> &mdash; thumbnails stay online, your timeline still
+        opens and reads normally, and your originals are restorable free of charge whenever you ask
+        or resubscribe. As with any restore from cold storage, it takes hours rather than seconds.
+        Section 15 of the <a href="foreverpawTOS.html">Terms of Service</a> has the detail.
+    </p>
+
+    <h3>Other retention periods</h3>
+    <ul>
+        <li><strong>Server logs and diagnostics:</strong> retained for a short operational period,
+        then rotated out.</li>
+        <li><strong>Usage ledgers</strong> (AI and storage): retained while needed for allowance
+        accounting, billing accuracy, and cost analysis.</li>
+        <li><strong>Subscription records:</strong> retained as long as needed for entitlement, and
+        afterwards as required for tax, accounting, and dispute resolution.</li>
+        <li><strong>Deleted memories and media:</strong> removed from your timeline immediately, and
+        the underlying files are removed from storage; copies may persist briefly in routine backups
+        until they expire, within thirty (30) days.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>11. Your rights and how to use them</h2>
+
+    <h3>Export &mdash; built in</h3>
+    <p>
+        Forever Paw can hand you your whole account: your user record, your dogs, every memory,
+        training sessions, earned achievements, personality answers, stories, digests, portraits,
+        and places. Use the export option in the app, or ask us.
+    </p>
+
+    <h3>Delete &mdash; built in</h3>
+    <p>
+        You can delete your account from within the app. This permanently removes your account
+        record, your dogs, your memories and their media, your training history, your personality
+        answers, your stories and digests, your medication records, your usage ledgers, and your
+        push tokens.
+    </p>
+    <p class="highlight">
+        Deletion is permanent. Export first if you want to keep your dog&rsquo;s timeline. Deleting
+        your account does not cancel a store subscription &mdash; cancel that through Apple or
+        Google.
+    </p>
+
+    <h3>Other rights</h3>
+    <p>Subject to applicable law, you may also:</p>
+    <ul>
+        <li><strong>Access</strong> the personal data we hold about you</li>
+        <li><strong>Correct</strong> inaccurate data &mdash; most of it is editable in the app</li>
+        <li><strong>Object to or restrict</strong> certain processing</li>
+        <li><strong>Opt out</strong> of sharing for cross-context behavioural advertising</li>
+        <li><strong>Withdraw consent</strong> for notifications, location tagging, personalised
+        advertising, or AI features, without losing the rest of the app</li>
+        <li><strong>Not be discriminated against</strong> for exercising a right. Offering a paid
+        tier with more features is not discrimination; refusing you service for making a privacy
+        request would be, and we do not do it.</li>
+        <li><strong>Appeal</strong> a decision we make on a request</li>
+    </ul>
+    <p>
+        Email <a href="mailto:apex@apextechnologygroup.io">apex@apextechnologygroup.io</a> with
+        &ldquo;Privacy Request &mdash; Forever Paw&rdquo; in the subject line. We verify requests
+        through the email address on your account and respond within 45 days, extendable once where
+        the law permits and we tell you why. If we decline, we will explain why and how to appeal;
+        we decide appeals within 45 days and, on denial, tell you how to contact your state Attorney
+        General.
+    </p>
+</div>
+
+<div class="section">
+    <h2>12. Security</h2>
+    <ul>
+        <li>All traffic between the app and our servers is protected with TLS.</li>
+        <li>Every dog-scoped request verifies ownership; another account&rsquo;s dog returns a 403.</li>
+        <li>The media bucket is private, and media keys carry a random component (Section 7).</li>
+        <li>Entitlement is resolved on our servers, never trusted from the app, so a modified client
+        cannot grant itself a plan or read another account&rsquo;s data.</li>
+        <li>Credentials and service keys are held outside the application directory on the server
+        and are never committed to source control.</li>
+        <li>Access to production systems is limited to the minimum personnel needed to operate them.</li>
+        <li>Security headers, HTTPS redirection, HSTS, rate limiting, and request size limits are
+        enforced at the API.</li>
+    </ul>
+    <p>
+        No system is perfectly secure. If we discover a breach affecting your personal data, we will
+        notify you and any regulator entitled to notice, within the timeframes applicable law
+        requires.
+    </p>
+    <p>
+        To report a vulnerability, email
+        <a href="mailto:apex@apextechnologygroup.io">apex@apextechnologygroup.io</a>. We will not
+        pursue legal action against good-faith security research that respects other users&rsquo;
+        privacy, avoids service degradation and data destruction, uses only accounts you control,
+        and gives us reasonable time to fix an issue before disclosure.
+    </p>
+</div>
+
+<div class="section">
+    <h2>13. International users and regional rights</h2>
+    <p>
+        Apex is based in the United States and our infrastructure is located there. If you use
+        Forever Paw from outside the United States, your information is transferred to and processed
+        in the United States, which may have different data protection laws than your country.
+    </p>
+
+    <h3>EEA, UK, and Switzerland (GDPR / UK GDPR)</h3>
+    <p>Where Forever Paw is offered in these jurisdictions, our legal bases are:</p>
+    <ul>
+        <li><strong>Contract</strong> &mdash; to provide the account, timeline, training, storage,
+        and subscription you signed up for</li>
+        <li><strong>Consent</strong> &mdash; for notifications, location tagging, optional AI
+        features, and personalised advertising, each withdrawable at any time</li>
+        <li><strong>Legitimate interests</strong> &mdash; to secure the service, prevent abuse,
+        enforce plan limits, and debug faults, balanced against your rights</li>
+        <li><strong>Legal obligation</strong> &mdash; where the law requires us to retain or disclose
+        something, including tax records for subscriptions</li>
+    </ul>
+    <p>
+        You have the rights of access, rectification, erasure, restriction, portability, and
+        objection, and the right to complain to your supervisory authority. Transfers rely on the
+        Standard Contractual Clauses or another valid mechanism.
+    </p>
+
+    <h3>California (CCPA / CPRA)</h3>
+    <p>
+        We collect the categories described in Section 2: identifiers, commercial information
+        (subscription records), internet and device activity, audio and visual information (your
+        photos, videos, and recordings), approximate location where you tag it or where it is
+        derived from an IP address for advertising, and user-generated content &mdash; for the
+        purposes in Section 4.
+    </p>
+    <ul>
+        <li><strong>We do not sell personal information for money.</strong></li>
+        <li><strong>We do share personal information for cross-context behavioural advertising</strong>
+        in the limited sense described in Sections 2(L), 6, and 9 &mdash; device-level ad signals on
+        the free tier only, never your content. You have the right to opt out.</li>
+        <li><strong>To opt out</strong>, either subscribe to Forever Paw+ (which removes advertising
+        entirely), decline app-tracking permission on your device, or email us with &ldquo;Do Not
+        Sell or Share &mdash; Forever Paw&rdquo; in the subject line. We honour Global Privacy
+        Control signals where we receive them.</li>
+        <li>We do not use or disclose sensitive personal information beyond the purposes permitted
+        without a right to limit.</li>
+        <li>We do not knowingly collect, sell, or share the personal information of consumers under
+        16.</li>
+        <li>You may use an authorised agent, with proof of authority.</li>
+    </ul>
+
+    <h3>Other U.S. states</h3>
+    <p>
+        Residents of Virginia, Colorado, Connecticut, Utah, Texas, Oregon, Montana, and other states
+        with comprehensive privacy laws have rights of access, correction, deletion, and
+        portability, and the right to opt out of targeted advertising &mdash; exercised through
+        Section 11 or the advertising opt-outs in Section 6. Where a universal opt-out signal is
+        recognised in your state, we honour it.
+    </p>
+</div>
+
+<div class="section">
+    <h2>14. Children</h2>
+    <p>
+        Forever Paw is intended for adults and is not directed to children. We do not knowingly
+        collect personal information from anyone under 18, and we do not knowingly show advertising
+        to them. If you believe a child has created an account, contact us and we will delete it.
+    </p>
+    <p>
+        If you upload photographs or videos that include children or other people, please see
+        Section 8 of the <a href="foreverpawTOS.html">Terms of Service</a> &mdash; you are
+        responsible for having the right and any necessary consent to do so.
+    </p>
+</div>
+
+<div class="section">
+    <h2>15. Changes to this policy</h2>
+    <p>
+        We may update this policy. If a change is material, we will update the effective date and
+        notify you in the app or by email. We will not retroactively apply a weaker policy to data
+        collected under a stronger one. Continued use after a change takes effect constitutes
+        acceptance.
+    </p>
+</div>
+
+<div class="section">
+    <h2>16. Contact</h2>
+    <p>
+        <strong>Email:</strong> <a href="mailto:apex@apextechnologygroup.io">apex@apextechnologygroup.io</a><br>
+        <strong>Company:</strong> Apex Technology Group, Inc.<br>
+        <strong>Subject line for privacy requests:</strong> &ldquo;Privacy Request &mdash; Forever Paw&rdquo;
+    </p>
+    <p>
+        Related document: <a href="foreverpawTOS.html">Terms of Service</a>
+    </p>
+</div>
+
+<div class="footer">
+    &copy; 2026 Apex Technology Group, Inc. All rights reserved.
+</div>
+
+</body>
+</html>
