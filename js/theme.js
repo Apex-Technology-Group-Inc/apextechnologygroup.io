@@ -11,7 +11,29 @@
   function isOn()  { return root.getAttribute('data-theme') === 'neon'; }
   function label() { return isOn() ? 'Jack out' : 'Jack in'; }
 
+  /* "Destroy this website" badge — only exists in the DOM while jacked in,
+     so the default theme never loads the third-party image. */
+  var badge = null;
+  function syncBadge() {
+    var footer = document.querySelector('footer .container');
+    if (!footer) return;
+    if (isOn() && !badge) {
+      badge = document.createElement('a');
+      badge.className = 'destroy-badge';
+      badge.href = 'https://destroy.spritefusion.com/?url=' + encodeURIComponent('https://apextechnologygroup.io') + '&from=badge';
+      badge.target = '_blank';
+      badge.rel = 'noopener';
+      badge.innerHTML = '<img src="https://destroy.spritefusion.com/badge.svg" alt="Destroy this website" width="180" height="40">';
+      footer.appendChild(badge);
+    } else if (!isOn() && badge) {
+      badge.remove();
+      badge = null;
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    syncBadge();
+
     var btn = document.querySelector('.theme-toggle');
     if (!btn) return;
 
@@ -19,6 +41,7 @@
       btn.setAttribute('aria-pressed', isOn() ? 'true' : 'false');
       btn.setAttribute('title', label());
       btn.setAttribute('aria-label', label() + ' — toggle neon mode');
+      syncBadge();
     }
 
     btn.addEventListener('click', function () {

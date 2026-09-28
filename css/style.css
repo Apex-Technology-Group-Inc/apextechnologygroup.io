@@ -475,6 +475,10 @@ footer .links a:hover { color: var(--text); }
 :root[data-theme="neon"] .app-logo { box-shadow: 0 0 22px rgba(255, 46, 151, .28); }
 :root[data-theme="neon"] footer { border-top-color: rgba(255, 46, 151, .3); }
 
+/* "Destroy this website" badge — injected by theme.js only while jacked in */
+.destroy-badge { display: inline-block; margin-top: 20px; line-height: 0; transition: filter .2s; }
+.destroy-badge:hover { filter: drop-shadow(0 0 10px var(--accent)); }
+
 @media (max-width: 640px) {
   :root[data-theme="neon"] nav ul { background: rgba(5, 1, 14, .95); }
 }
