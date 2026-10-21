@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/home.css">
   <script src="js/theme.js"></script>
   <script src="js/home.js" defer></script>
+  <script src="js/orbit.js" defer></script>
 </head>
 <body class="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -43,21 +44,36 @@
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="art-label"><span class="signal-dot"></span> THE APEX ECOSYSTEM <span>01 / ∞</span></div>
+        <div class="orbit-stage">
         <svg class="orbit-map" viewBox="0 0 540 540" fill="none">
-          <defs><radialGradient id="sphere"><stop stop-color="#9a86ed"/><stop offset=".45" stop-color="#6555a7"/><stop offset="1" stop-color="#181321"/></radialGradient><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" stroke="#aaa0bd" stroke-opacity=".1"/></pattern></defs>
-          <rect width="540" height="540" fill="url(#grid)"/>
-          <circle cx="270" cy="270" r="230" stroke="#9488ac" stroke-opacity=".22" stroke-dasharray="3 8"/>
-          <circle cx="270" cy="270" r="182" stroke="#9488ac" stroke-opacity=".25"/>
-          <ellipse cx="270" cy="270" rx="235" ry="86" transform="rotate(-35 270 270)" stroke="#b8a3f3" stroke-opacity=".5"/>
-          <ellipse cx="270" cy="270" rx="235" ry="86" transform="rotate(35 270 270)" stroke="#9488ac" stroke-opacity=".3"/>
-          <path d="M270 30v480M30 270h480" stroke="#9488ac" stroke-opacity=".16"/>
-          <circle cx="270" cy="270" r="125" fill="url(#sphere)" fill-opacity=".35" stroke="#c4b5fd" stroke-opacity=".4"/>
-          <ellipse cx="270" cy="270" rx="63" ry="125" stroke="#c4b5fd" stroke-opacity=".2"/><ellipse cx="270" cy="270" rx="125" ry="43" stroke="#c4b5fd" stroke-opacity=".2"/>
-          <svg class="hero-brand" x="165" y="236" width="210" height="67" viewBox="45 200 455 145"><image href="img/apex-logo.webp" width="512" height="512"/></svg>
-          <circle cx="95" cy="200" r="5" fill="#b9a2ff"/><circle cx="434" cy="337" r="5" fill="#b9a2ff"/><circle cx="365" cy="117" r="4" fill="#b9a2ff"/>
-          <path d="m92 195-20-38H35M436 342l24 32h45M368 113l20-35h65" stroke="#b8a3f3" stroke-opacity=".6"/>
-          <text x="35" y="145" fill="#b0a7c0" font-size="10" font-family="monospace" letter-spacing="2">BUILD</text><text x="449" y="394" fill="#b0a7c0" font-size="10" font-family="monospace" letter-spacing="2">CONNECT</text><text x="397" y="66" fill="#b0a7c0" font-size="10" font-family="monospace" letter-spacing="2">DISCOVER</text>
+          <defs><radialGradient id="sphere"><stop stop-color="#9a86ed"/><stop offset=".45" stop-color="#6555a7"/><stop offset="1" stop-color="#181321"/></radialGradient><radialGradient id="sphere-light" cx=".5" cy=".5" r=".55"><stop stop-color="#efe9ff" stop-opacity=".55"/><stop offset="1" stop-color="#efe9ff" stop-opacity="0"/></radialGradient><radialGradient id="electron-glow"><stop stop-color="#e6deff" stop-opacity=".7"/><stop offset="1" stop-color="#b9a2ff" stop-opacity="0"/></radialGradient><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" stroke="#aaa0bd" stroke-opacity=".1"/></pattern></defs>
+          <!-- data-depth: how far (in viewBox units) each layer shifts with the pointer; js/orbit.js -->
+          <g data-depth="3"><rect x="-30" y="-30" width="600" height="600" fill="url(#grid)"/></g>
+          <g data-depth="7">
+            <circle cx="270" cy="270" r="230" stroke="#9488ac" stroke-opacity=".22" stroke-dasharray="3 8"/>
+            <circle cx="270" cy="270" r="182" stroke="#9488ac" stroke-opacity=".25"/>
+            <path d="M270 30v480M30 270h480" stroke="#9488ac" stroke-opacity=".16"/>
+          </g>
+          <g data-depth="13">
+            <ellipse cx="270" cy="270" rx="235" ry="86" transform="rotate(-35 270 270)" stroke="#b8a3f3" stroke-opacity=".5"/>
+            <ellipse cx="270" cy="270" rx="235" ry="86" transform="rotate(35 270 270)" stroke="#9488ac" stroke-opacity=".3"/>
+            <g transform="rotate(-35 270 270)"><g><circle r="10" fill="url(#electron-glow)"/><circle r="3" fill="#ece6ff"/><animateMotion dur="12s" repeatCount="indefinite" path="M505 270a235 86 0 1 1-470 0a235 86 0 1 1 470 0"/></g></g>
+            <g transform="rotate(35 270 270)"><g><circle r="8" fill="url(#electron-glow)"/><circle r="2.4" fill="#ece6ff"/><animateMotion dur="17s" begin="-7s" repeatCount="indefinite" path="M35 270a235 86 0 1 1 470 0a235 86 0 1 1-470 0"/></g></g>
+          </g>
+          <g data-depth="20">
+            <circle cx="270" cy="270" r="125" fill="url(#sphere)" fill-opacity=".35" stroke="#c4b5fd" stroke-opacity=".4"/>
+            <circle cx="270" cy="270" r="125" fill="url(#sphere-light)" fill-opacity=".45"/>
+            <ellipse cx="270" cy="270" rx="63" ry="125" stroke="#c4b5fd" stroke-opacity=".2"/><ellipse cx="270" cy="270" rx="125" ry="43" stroke="#c4b5fd" stroke-opacity=".2"/>
+            <svg class="hero-brand" x="165" y="236" width="210" height="67" viewBox="45 200 455 145"><image href="img/apex-logo.webp" width="512" height="512"/></svg>
+          </g>
+          <g data-depth="10">
+            <circle cx="95" cy="200" r="5" fill="#b9a2ff"/><circle cx="434" cy="337" r="5" fill="#b9a2ff"/><circle cx="365" cy="117" r="4" fill="#b9a2ff"/>
+            <path d="m92 195-20-38H35M436 342l24 32h45M368 113l20-35h65" stroke="#b8a3f3" stroke-opacity=".6"/>
+            <text x="35" y="145" fill="#b0a7c0" font-size="10" font-family="monospace" letter-spacing="2">BUILD</text><text x="449" y="394" fill="#b0a7c0" font-size="10" font-family="monospace" letter-spacing="2">CONNECT</text><text x="397" y="66" fill="#b0a7c0" font-size="10" font-family="monospace" letter-spacing="2">DISCOVER</text>
+          </g>
         </svg>
+        <canvas class="orbit-field"></canvas>
+        </div>
         <div class="orbit-chip chip-flight"><img src="img/FlightDoseLogo.png" alt="" width="38" height="38"><div>FlightDose<small>SCIENCE, IN YOUR POCKET</small></div></div>
         <div class="orbit-chip chip-rentool"><img src="img/RentoolLogo.png" alt="" width="38" height="38"><div>RenTool<small>PUT MORE TOOLS TO WORK</small></div></div>
         <div class="art-footer"><span>FROM AN IDEA TO SOMETHING USEFUL.</span><span>↗</span></div>
