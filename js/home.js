@@ -20,7 +20,7 @@
       toggle.focus();
     }
   });
-  window.matchMedia('(max-width: 760px)').addEventListener('change', function () {
+  window.matchMedia('(max-width: 1100px)').addEventListener('change', function () {
     setOpen(false);
   });
 })();
