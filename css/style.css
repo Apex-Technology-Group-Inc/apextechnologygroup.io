@@ -325,6 +325,17 @@ footer .links a:hover { color: var(--text); }
 }
 .hub-head .lead { color: var(--text-dim); font-size: 1.05rem; max-width: 500px; margin: 0 auto; }
 
+.site-privacy {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 30px 28px; margin-bottom: 44px;
+}
+.site-privacy h2 { font-size: 1.3rem; font-weight: 700; letter-spacing: -.01em; }
+.site-privacy h3 { font-size: .95rem; font-weight: 700; margin: 20px 0 6px; }
+.site-privacy p { color: var(--text-dim); font-size: .92rem; line-height: 1.7; }
+.site-privacy p.pc-date { margin: 4px 0 14px; }
+.site-privacy a { color: var(--accent); }
+.hub-subhead { font-size: 1.1rem; font-weight: 700; margin-bottom: 18px; }
+
 .policy-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
