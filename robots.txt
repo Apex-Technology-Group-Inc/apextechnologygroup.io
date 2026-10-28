@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /server/
+Disallow: /deploy/
+
+Sitemap: https://apextechnologygroup.io/sitemap.xml

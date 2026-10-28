@@ -96,7 +96,7 @@
 /* ── Service area ───────────────────────────────────── */
 .area { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; align-items: center; margin-top: 64px; padding: 40px; border: 1px solid #4a3c26; border-radius: 9px; background: radial-gradient(ellipse at 0% 0%, #ecc27e12, transparent 60%), var(--bg-card); }
 .local .area h3 { font-size: 1.9rem; margin-top: 14px; letter-spacing: -.03em; }
-.area > div > p:last-child { margin-top: 12px; color: var(--text-dim); font-size: .9rem; line-height: 1.75; }
+.area > div > p:not(.eyebrow) { margin-top: 12px; color: var(--text-dim); font-size: .9rem; line-height: 1.75; }
 .parishes { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 30px; }
 .parishes li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--border); font-size: .92rem; }
 .parishes li::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 8px var(--ok); flex-shrink: 0; }

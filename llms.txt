@@ -1,0 +1,34 @@
+# Apex Technology Group
+
+> Apex Technology Group builds custom software and integrates AI, locally run or in the cloud, for businesses and organizations of any size in the New Orleans metro, and consults on where those systems pay off. It also provides nuclear training technology and simulator engineering services, and builds and runs its own products: RenTool, FlightDose, MySievert, ToxFinder, and ApexPoster.
+
+## Local services: New Orleans metro
+
+- Who it is for: businesses and organizations of any size in Orleans, Jefferson, St. Tammany, St. Bernard, St. Charles, St. John the Baptist, and Plaquemines parishes, Louisiana. That includes New Orleans, Metairie, Kenner, Harahan, Gretna, Harvey, Marrero, Slidell, Covington, Mandeville, Chalmette, Luling, Destrehan, LaPlace, and Belle Chasse.
+- What: custom software and apps, systems integration, workflow automation, custom AI solutions (private and locally run models, or cloud services), data and reporting, websites and hosting, and technology consulting.
+- How it works: a free 20-minute intro call; a $750 fixed-fee, on-site Technology Assessment that ends in a written plan, with the fee credited toward a build; fixed-price builds with scope, schedule, and deliverables agreed in writing; optional monthly support. Clients own what is built.
+- [Custom software & AI for New Orleans businesses](https://apextechnologygroup.io/new-orleans/)
+- [Book a free intro call](https://apextechnologygroup.io/new-orleans/#consult)
+
+## Nuclear training technology
+
+- Custom software and technical consulting for nuclear power plant training organizations: simulator engineering and test automation, instructor station tools, secure exam grading, operator performance assessment, qualification management, electronic procedures, and local AI. Delivered by former licensed SROs, STAs, and simulator engineers. Remote consultation is free.
+- [Nuclear training technology & simulator engineering services](https://apextechnologygroup.io/nuclear/)
+
+## Products we built and run
+
+- [RenTool](https://rentool.net): a peer-to-peer marketplace for renting tools and equipment from neighbors (iOS, Android)
+- [FlightDose](https://flightdose.com): estimates the cosmic radiation dose of each flight (iOS, Android)
+- [ToxFinder](https://toxfinder.com): published clinic prices for injectables, compared across markets (web)
+- [ApexPoster](https://apexposter.net): digital signage for Fire TV and Android TV screens
+- MySievert: a private, encrypted log of a person's medical radiation history (iOS, Android)
+
+## Websites
+
+- We build, host, and maintain websites, including for [McKenzie's Rays of Sunshine](https://mckenziesraysofsunshine.org), a nonprofit supporting families through pregnancy and infant loss.
+
+## Contact
+
+- Email: support@apextechnologygroup.io
+- [Contact form](https://apextechnologygroup.io/#contact)
+- [Privacy](https://apextechnologygroup.io/privacy.html), [Terms](https://apextechnologygroup.io/terms.html), [Support](https://apextechnologygroup.io/support.html)
