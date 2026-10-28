@@ -78,7 +78,7 @@
 .product-tox { --product-accent: #9ce0c4; }
 .product-poster { --product-accent: #f4c994; }
 .product-mysievert { --product-accent: #9adce6; }
-.product-top, .upcoming-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 25px; gap: 16px; }
+.product-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 25px; gap: 16px; }
 .product-top img { width: 64px; height: 64px; border-radius: 15px; object-fit: contain; }
 .status { display: inline-flex; align-items: center; gap: 7px; padding: 6px 10px; border: 1px solid #4f425f; border-radius: 4px; color: var(--accent); font: 9px/1.4 ui-monospace, Consolas, monospace; letter-spacing: .08em; white-space: nowrap; }
 .product-category { color: var(--product-accent, var(--accent)); font: 9px/1.7 ui-monospace, Consolas, monospace; letter-spacing: .14em; margin-bottom: 6px; }
@@ -105,22 +105,23 @@
 .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; list-style: none; }
 .service-tags li { border: 1px solid #4c544b; color: #d6d9cb; padding: 5px 8px; border-radius: 3px; font-size: .65rem; }
 .community-copy .text-link { color: #e5d09b; }
-.coming-next { border-top: 1px solid var(--border); }
-.upcoming-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.upcoming-card { display: flex; flex-direction: column; padding: 33px; border: 1px solid var(--border); border-radius: 9px; background: linear-gradient(135deg, #1e2a2b, #131b1e); }
-.upcoming-top svg { width: 48px; height: 48px; color: #b1c9df; }
-.status.upcoming { color: #bac3c6; border-color: #49545b; }
-.upcoming-card .product-category { color: #b1c9df; }
-.upcoming-card > p:not(.product-category) { font-size: .94rem; color: var(--text-dim); line-height: 1.8; margin: 20px 0 30px; max-width: 420px; }
-.upcoming-footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); font-size: .75rem; color: #b1c9df; }
-.inventory-card { background: linear-gradient(135deg, #2d2822, #171b1d); }
-.inventory-card .product-category, .inventory-card .upcoming-top svg, .inventory-card .upcoming-footer { color: #dfc39e; }
-.also-building { margin-top: 38px; padding-top: 30px; border-top: 1px solid var(--border); }
-.development-item { display: flex; align-items: center; gap: 18px; margin-top: 22px; }
-.development-item img { border-radius: 10px; }
-.development-item h3 { font-size: 1rem; letter-spacing: -.02em; }
-.development-item h3 span { display: inline-block; margin-left: 15px; font-size: .7rem; color: var(--text-dim); font-weight: 400; letter-spacing: 0; }
-.development-item p { margin-top: 7px; font-size: .8rem; line-height: 1.7; color: var(--text-dim); }
+.portfolio .section-heading > p { max-width: 400px; }
+/* In-development ribbon: the lowest-priority block, kept small at the foot of the page. */
+.dev-ribbon { padding: 26px 0 30px; background: #0e0e14; border-top: 1px solid var(--border); }
+.ribbon-label { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; font: 9px/1.7 ui-monospace, Consolas, monospace; letter-spacing: .12em; color: var(--accent); }
+.ribbon-label .signal-dot { align-self: center; }
+.ribbon-label > span:last-child { font: .72rem/1.6 'Segoe UI', sans-serif; letter-spacing: 0; color: var(--text-dim); }
+.ribbon-items { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 16px; }
+.ribbon-items li { display: flex; align-items: flex-start; gap: 12px; }
+.ribbon-items svg, .ribbon-items img { flex-shrink: 0; width: 28px; height: 28px; }
+.ribbon-items svg { color: #b1c9df; }
+.ribbon-items img { border-radius: 7px; }
+.ribbon-inventory svg { color: #dfc39e; }
+.home .ribbon-items h3 { font-size: .86rem; letter-spacing: -.01em; }
+.ribbon-items h3 small { display: block; margin-top: 2px; font: 8px/1.7 ui-monospace, Consolas, monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); font-weight: 400; }
+.ribbon-items p { margin-top: 6px; font-size: .72rem; line-height: 1.6; color: var(--text-dim); }
+.ribbon-items em { font-style: normal; color: #b1c9df; }
+.ribbon-inventory em { color: #dfc39e; }
 .contact-section { padding: 74px 0; background: var(--accent); color: #211a32; }
 .contact-layout { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 70px; }
 .contact-section .eyebrow { color: #483760; }
@@ -140,6 +141,7 @@
 :root[data-theme="neon"] .home { --bg: #080414; --bg-card: #140c26; --border: #40305d; --text: #f4ecff; --text-dim: #c1afd8; --accent: #00f0ff; --accent-2: #00f0ff; }
 :root[data-theme="neon"] .home nav { background: #080414f0; }
 :root[data-theme="neon"] .home .portfolio { background: #100820; }
+:root[data-theme="neon"] .home .dev-ribbon { background: #0b0619; }
 :root[data-theme="neon"] .home .hero-art { filter: hue-rotate(95deg); }
 :root[data-theme="neon"] .home .contact-section { color: #080414; }
 :root[data-theme="neon"] .home .contact-section h2 span, :root[data-theme="neon"] .home .contact-section .eyebrow { color: #16494e; }
@@ -193,16 +195,15 @@
   .section-heading { display: block; margin-bottom: 30px; }
   .section-heading > p { margin-top: 20px; max-width: 450px; font-size: .9rem; }
   .home h2 { font-size: clamp(2.1rem, 7.4vw, 3rem); }
-  .product-grid, .upcoming-grid, .community-feature, .contact-layout { grid-template-columns: 1fr; }
-  .product-card, .upcoming-card { padding: 27px; }
+  .product-grid, .ribbon-items, .community-feature, .contact-layout { grid-template-columns: 1fr; }
+  .ribbon-items { gap: 16px; }
+  .product-card { padding: 27px; }
   .sunshine-art { min-height: 320px; padding: 32px 30px 75px; }
   .sunshine-art > span { bottom: 22px; left: 30px; }
   .community-copy { padding: 30px; }
   .community-copy h3 { font-size: 2.1rem; }
   .contact-section { padding: 56px 0; }
   .contact-layout { gap: 28px; }
-  .development-item { align-items: flex-start; }
-  .development-item h3 span { display: block; margin: 8px 0 0; line-height: 1.5; }
   .footer-top { flex-direction: column; align-items: flex-start; gap: 10px; }
   .home footer .links { justify-content: flex-start; gap: 14px; }
 }
