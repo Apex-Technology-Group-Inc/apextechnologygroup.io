@@ -18,7 +18,7 @@
 window.ApexAnalytics = (function () {
   'use strict';
 
-  var GA_ID = 'G-PASTE_ID_HERE';
+  var GA_ID = 'G-3GV0VSQTT0';
   var HOST = 'apextechnologygroup.io';
   var ENDPOINT = '/api/events';
   var SESSION_KEY = 'apex.sid';
