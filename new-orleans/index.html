@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="../css/local.css">
   <script src="../js/theme.js"></script>
   <script src="../js/home.js" defer></script>
+  <script src="../js/contact.js" defer></script>
   <script src="../js/local.js" defer></script>
   <script type="application/ld+json">
   {
@@ -279,12 +280,13 @@
         <p class="audience"><span>Typically for</span> Owners · General managers · Office managers · Operations leads</p>
       </div>
 
-      <form class="consult-form" id="consult-form" action="mailto:support@apextechnologygroup.io?subject=Business%20technology%20%E2%80%94%20intro%20call%20request" method="post" enctype="text/plain">
+      <form class="consult-form" id="consult-form" data-contact="new-orleans" action="mailto:support@apextechnologygroup.io?subject=Business%20technology%20%E2%80%94%20intro%20call%20request" method="post" enctype="text/plain">
         <div class="form-head"><h3>Intro call request</h3><span>NEW ORLEANS METRO</span></div>
         <div class="field-row">
-          <label>Name<input name="Name" autocomplete="name" required></label>
-          <label>Phone<input name="Phone" type="tel" autocomplete="tel" placeholder="Optional"></label>
+          <label>Name<input name="Name" autocomplete="name" maxlength="120" required></label>
+          <label>Phone<input name="Phone" type="tel" autocomplete="tel" maxlength="40" placeholder="Optional"></label>
         </div>
+        <label>Email<input name="Email" type="email" autocomplete="email" maxlength="254" required></label>
         <div class="field-row">
           <label>Business<input name="Business" autocomplete="organization" required></label>
           <label>Parish
@@ -313,9 +315,11 @@
             <label><input type="checkbox" name="Interest" value="Not sure yet"><span>Not sure yet</span></label>
           </div>
         </fieldset>
-        <label>What's slowing you down?<textarea name="Message" rows="4" placeholder="A few sentences is plenty."></textarea></label>
-        <button class="button button-primary" type="submit">Compose request <span aria-hidden="true">↗</span></button>
-        <p class="form-note">Opens a pre-filled message in your email app. Nothing is sent until you press send. Prefer to write directly? <a href="mailto:support@apextechnologygroup.io?subject=Business%20technology%20%E2%80%94%20intro%20call%20request">support@apextechnologygroup.io</a></p>
+        <label>What's slowing you down?<textarea name="Message" rows="4" maxlength="5000" placeholder="A few sentences is plenty."></textarea></label>
+        <label class="hp" aria-hidden="true">Leave this empty<input name="company_website" tabindex="-1" autocomplete="off"></label>
+        <button class="button button-primary" type="submit">Send request <span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+        <p class="form-note">Goes straight to our inbox. Prefer to write directly? <a href="mailto:support@apextechnologygroup.io?subject=Business%20technology%20%E2%80%94%20intro%20call%20request">support@apextechnologygroup.io</a></p>
       </form>
     </div>
   </section>

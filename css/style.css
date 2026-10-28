@@ -482,3 +482,10 @@ footer .links a:hover { color: var(--text); }
 @media (max-width: 640px) {
   :root[data-theme="neon"] nav ul { background: rgba(5, 1, 14, .95); }
 }
+
+/* ── Contact forms (js/contact.js) ───────────────────── */
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.form-status { font-size: .82rem; line-height: 1.6; text-align: center; color: var(--text-dim); }
+.form-status.ok { padding: 16px; border: 1px solid #7ee2a855; border-radius: 6px; background: #7ee2a812; color: var(--text); text-align: left; }
+.form-status.warn { color: #ffc861; }
+.is-sent > :not(.form-head):not(.form-status) { display: none; }

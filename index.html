@@ -17,6 +17,7 @@
   <script src="js/theme.js"></script>
   <script src="js/home.js" defer></script>
   <script src="js/orbit.js" defer></script>
+  <script src="js/contact.js" defer></script>
 </head>
 <body class="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -168,7 +169,38 @@
       </article>
     </div>
   </section>
-  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-layout"><div><p class="eyebrow">HAVE SOMETHING IN MIND?</p><h2 id="contact-title">Let's make<br>something <span>useful.</span></h2></div><div><p>A local business project, custom software or AI for your organization, a training-technology project, a website that needs a fresh start, a question about a product, or an idea worth exploring. We'd like to hear it.</p><a class="button button-primary" href="mailto:support@apextechnologygroup.io">Get in touch <span aria-hidden="true">↗</span></a></div></div></section>
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-layout">
+      <div class="contact-copy"><p class="eyebrow">HAVE SOMETHING IN MIND?</p><h2 id="contact-title">Let's make<br>something <span>useful.</span></h2><p>A local business project, custom software or AI for your organization, a training-technology project, a website that needs a fresh start, a question about a product, or an idea worth exploring. We'd like to hear it.</p></div>
+      <form class="contact-form" data-contact="home" action="mailto:support@apextechnologygroup.io?subject=Website%20inquiry" method="post" enctype="text/plain">
+        <div class="form-head"><h3>Get in touch</h3><span>FREE INTRO CALL</span></div>
+        <div class="field-row">
+          <label>Name<input name="Name" autocomplete="name" maxlength="120" required></label>
+          <label>Email<input name="Email" type="email" autocomplete="email" maxlength="254" required></label>
+        </div>
+        <div class="field-row">
+          <label>Phone<input name="Phone" type="tel" autocomplete="tel" maxlength="40" placeholder="Optional"></label>
+          <label>Organization<input name="Organization" autocomplete="organization" maxlength="160" placeholder="Optional"></label>
+        </div>
+        <fieldset>
+          <legend>What can we help with?</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="Interest" value="Custom software"><span>Custom software</span></label>
+            <label><input type="checkbox" name="Interest" value="AI integration (local or cloud)"><span>AI integration</span></label>
+            <label><input type="checkbox" name="Interest" value="Technology consulting"><span>Consulting</span></label>
+            <label><input type="checkbox" name="Interest" value="Nuclear training technology"><span>Nuclear training</span></label>
+            <label><input type="checkbox" name="Interest" value="Website"><span>Website</span></label>
+            <label><input type="checkbox" name="Interest" value="Something else"><span>Something else</span></label>
+          </div>
+        </fieldset>
+        <label>What's on your mind?<textarea name="Message" rows="4" maxlength="5000" placeholder="A few sentences is plenty."></textarea></label>
+        <label class="hp" aria-hidden="true">Leave this empty<input name="company_website" tabindex="-1" autocomplete="off"></label>
+        <button class="button button-primary" type="submit">Send <span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+        <p class="form-note">Goes straight to our inbox. Prefer email? <a href="mailto:support@apextechnologygroup.io">support@apextechnologygroup.io</a></p>
+      </form>
+    </div>
+  </section>
   <section class="dev-ribbon" id="next" aria-labelledby="next-title">
     <div class="container">
       <p class="ribbon-label"><span class="signal-dot"></span> <span id="next-title">IN DEVELOPMENT</span> <span>Curiosity doesn't stand still. A look at what we're building next: new tools, new possibilities, the same practical approach.</span></p>
