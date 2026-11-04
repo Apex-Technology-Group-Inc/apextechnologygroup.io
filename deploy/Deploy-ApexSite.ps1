@@ -48,7 +48,7 @@ $appcmd = "$env:SystemRoot\System32\inetsrv\appcmd.exe"
 # What the public site is made of. Everything else in the repo (server\, deploy\, .claude\)
 # stays out of the web root.
 $SiteFiles = @('*.html', 'app-ads.txt', 'robots.txt', 'sitemap.xml', 'llms.txt', 'web.config')
-$SiteDirs  = @('css', 'js', 'img', 'policies', 'new-orleans', 'nuclear')
+$SiteDirs  = @('css', 'js', 'img', 'policies', 'new-orleans', 'nuclear', 'tv')
 
 function Assert-Admin([string]$What) {
     $principal = New-Object Security.Principal.WindowsPrincipal ([Security.Principal.WindowsIdentity]::GetCurrent())
@@ -93,7 +93,8 @@ function Invoke-Robocopy([string[]]$Arguments) {
 # A stage must be a whole site with config IIS can parse; IIS answers 500.19 for the whole
 # site (and /api under it) when web.config is malformed.
 function Test-Stage {
-    foreach ($f in @('www\index.html', 'www\app-ads.txt', 'www\policies\Rentool.html', 'api\Apex.Site.Api.dll')) {
+    # tv\ is where the QR code on ApexPoster Free-plan screens points; it must never drop out of a deploy.
+    foreach ($f in @('www\index.html', 'www\app-ads.txt', 'www\policies\Rentool.html', 'www\tv\index.html', 'api\Apex.Site.Api.dll')) {
         if (-not (Test-Path (Join-Path $Stage $f))) { throw "Stage $Stage is missing $f. Run without -Promote first." }
     }
     foreach ($f in @('www\web.config', 'api\web.config')) {

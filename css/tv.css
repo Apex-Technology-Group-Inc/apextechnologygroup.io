@@ -1,0 +1,83 @@
+/* ── /tv/ ────────────────────────────────────────────────
+   The page the Apex QR code on ApexPoster Free-plan screens opens. It's read on a
+   phone by someone who just scanned a TV, so it's one narrow column, phone first.
+   Colours come from style.css, so neon mode applies here too.                  */
+
+.tv main { max-width: 560px; margin: 0 auto; padding: 0 20px; }
+.tv section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.tv section:last-child { border-bottom: 0; }
+.tv h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; margin-bottom: 14px; }
+
+/* ── The pitch ── */
+.tv-hero { text-align: center; padding-top: 48px; position: relative; }
+.tv-hero::before {
+  content: '';
+  position: absolute; left: 50%; top: 0; transform: translateX(-50%);
+  width: 460px; max-width: 100%; height: 260px;
+  background: radial-gradient(ellipse at center, var(--glow), transparent 70%);
+  pointer-events: none; z-index: -1;
+}
+.tv-logo { display: block; width: 64px; height: 64px; border-radius: 14px; margin: 0 auto 18px; }
+.tv-eyebrow {
+  font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent-2); margin-bottom: 10px;
+}
+.tv-hero h1 {
+  font-size: clamp(1.9rem, 8vw, 2.6rem); font-weight: 800;
+  letter-spacing: -.03em; line-height: 1.15; margin-bottom: 14px;
+}
+.tv-hero h1 .gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tv-lead { color: var(--text-dim); font-size: 1.02rem; margin-bottom: 24px; }
+.tv-cta {
+  display: block; padding: 15px 20px; border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent), #8b7cf6);
+  color: #fff; font-weight: 700; font-size: 1.05rem;
+  box-shadow: 0 8px 28px var(--glow);
+  transition: filter .2s, transform .2s;
+}
+.tv-cta:hover { color: #fff; filter: brightness(1.08); transform: translateY(-2px); }
+.tv-cta:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
+.tv-note { color: var(--text-dim); font-size: .85rem; margin-top: 10px; }
+
+/* ── How it works ── */
+.tv-steps ol { list-style: none; counter-reset: step; display: grid; gap: 14px; }
+.tv-steps li { counter-increment: step; position: relative; padding-left: 44px; color: var(--text-dim); }
+.tv-steps li b { color: var(--text); }
+.tv-steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -1px;
+  width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--glow); color: var(--accent); font-weight: 700; font-size: .9rem;
+}
+
+/* ── For the screen's owner ── */
+.tv-owner p { color: var(--text-dim); margin-bottom: 10px; }
+.tv-owner a { font-weight: 600; }
+
+/* ── The other apps ── */
+.tv-app {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px; margin-bottom: 14px;
+}
+.tv-app img { width: 48px; height: 48px; border-radius: 12px; flex: none; }
+.tv-app h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.tv-app p { color: var(--text-dim); font-size: .92rem; }
+.tv-app .store-links { margin-top: 14px; }
+.tv-app p.tv-fine { font-size: .75rem; margin-top: 12px; }
+.tv-app-small a { display: inline-block; margin-top: 8px; font-weight: 600; font-size: .92rem; }
+.tv-tag {
+  font-size: .62rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
+  padding: 2px 8px; border-radius: 6px; margin-left: 6px; vertical-align: middle;
+  background: var(--glow-2); color: var(--accent-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tv-cta { transition: none; }
+  .tv-cta:hover { transform: none; }
+}
